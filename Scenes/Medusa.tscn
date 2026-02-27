@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://6hqmwbsaiu0i"]
+
+[ext_resource type="Script" uid="uid://c88sna0ibxlj3" path="res://Scenes/MedusaMovement.gd" id="1_od7hl"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tv2w8"]
+size = Vector2(32, 32)
+
+[node name="Player" type="Node2D" unique_id=1466556318]
+script = ExtResource("1_od7hl")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=386442128]
+texture = SubResource("PlaceholderTexture2D_tv2w8")
