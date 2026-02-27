@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://ckokupin1jhmt"]
 
 [node name="Level" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="TileMap" type="TileMapLayer" parent="."]
