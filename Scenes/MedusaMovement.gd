@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 enum Direction {UP, DOWN, LEFT, RIGHT }
 

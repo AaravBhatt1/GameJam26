@@ -5,8 +5,15 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tv2w8"]
 size = Vector2(32, 32)
 
-[node name="Player" type="Node2D" unique_id=1466556318]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od7hl"]
+
+[node name="Player" type="Area2D" unique_id=1294657684]
 script = ExtResource("1_od7hl")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=386442128]
 texture = SubResource("PlaceholderTexture2D_tv2w8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2072411526]
+shape = SubResource("RectangleShape2D_od7hl")
+
+[node name="PlayerMovementRaycast" type="RayCast2D" parent="." unique_id=1154631358]
