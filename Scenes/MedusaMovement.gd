@@ -1,5 +1,8 @@
 extends Node2D
 
+enum Direction {UP, DOWN, LEFT, RIGHT }
+
+var facingDirection : Direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,10 +16,17 @@ func _process(delta: float) -> void:
 
 func getInput():
 	if (Input.is_action_just_pressed("MoveUp")):
-		pass
+		facingDirection = Direction.UP
+		Move()
 	elif (Input.is_action_just_pressed("MoveDown")):
-		pass
+		facingDirection = Direction.DOWN#
+		Move()
 	elif (Input.is_action_just_pressed("MoveLeft")):
-		pass
+		facingDirection = Direction.LEFT
+		Move()
 	elif (Input.is_action_just_pressed("MoveRight")):
-		pass
+		facingDirection = Direction.RIGHT
+		Move()
+
+func Move():
+	pass
