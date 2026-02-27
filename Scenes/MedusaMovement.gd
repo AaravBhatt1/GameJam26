@@ -45,7 +45,7 @@ func TryMove(MoveVector : Vector2):
 	if !ray.is_colliding():
 		var tween = create_tween()
 		tween.tween_property(self, "position", 
-		position + MoveVector, 1.0/ANIMATION_SPEED).set_trans(Tween.TRANS_SINE)
+		position + MoveVector*2, 1.0/ANIMATION_SPEED).set_trans(Tween.TRANS_SINE)
 		moving = true
 		await tween.finished
 		moving = false
