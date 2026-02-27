@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckokupin1jhmt"]
+[gd_scene format=3 uid="uid://ckokupin1jhmt"]
 
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="1_tumq0"]
 
 [sub_resource type="TileSet" id="TileSet_5xgho"]
 tile_size = Vector2i(32, 32)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=624758326]
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=1324554260]
 
-[node name="TileMap" type="TileMapLayer" parent="."]
+[node name="TileMap" type="TileMapLayer" parent="." unique_id=1216467366]
 tile_set = SubResource("TileSet_5xgho")
 
-[node name="Player" parent="." instance=ExtResource("1_tumq0")]
+[node name="Player" parent="." unique_id=1382057978 instance=ExtResource("1_tumq0")]
 position = Vector2(73, -6)
