@@ -1,7 +1,7 @@
 extends Area2D
 
 var TILE_SIZE = 32
-var ANIMATION_SPEED = 3
+var ANIMATION_SPEED = 4
 
 enum Direction {UP, DOWN, LEFT, RIGHT }
 
@@ -9,13 +9,7 @@ var facingDirection : Direction
 var moving : bool = false
 @onready var ray = $PlayerMovementRaycast
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	getInput()
 
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bbm4e2xxp60tp" path="res://tileset.tres" id="1_u52ul"]
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=863404533]
 
 [node name="Walls" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
