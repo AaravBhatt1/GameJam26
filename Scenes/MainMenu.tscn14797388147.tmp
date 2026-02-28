@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://dddfowyysi8kr"]
+[gd_scene format=3 uid="uid://dddfowyysi8kr"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
@@ -44,10 +44,8 @@ SceneToLoad = "res://level.tscn"
 
 [node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=549240663 instance=ExtResource("2_8saeu")]
 layout_mode = 2
-SceneToLoad = "Quit"
 
 [node name="FadeIn" parent="." unique_id=151081257 instance=ExtResource("3_8saeu")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 color = Color(0, 0, 0, 0)
