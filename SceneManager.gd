@@ -12,8 +12,9 @@ func _ready():
 		medusa.LevelFailed.connect(ReloadLevel)
 
 func LoadLevel():
-	$Control/FadeIn.show()
-	$Control/FadeIn.fadeIn()
+	if !LevelFailed:
+		$Control/FadeIn.show()
+		$Control/FadeIn.fadeIn()
 	
 func ReloadLevel():
 	LevelFailed = true

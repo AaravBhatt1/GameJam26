@@ -12,3 +12,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
 text = "LABEL"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1588244123]
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
