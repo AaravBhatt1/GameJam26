@@ -14,13 +14,37 @@ func SetSprite():
 	var tex;
 	match CurrentDirection:
 		Vector2.UP:
-			tex = load("res://Assets/EnemySprites/EnemySpriteUp.png")
+			match EnemyStatus:
+				EnemyState.Target:
+					tex = load("res://Assets/EnemySprites/TargetSpriteUp.png")
+				EnemyState.Henchmen:
+					tex = load("res://Assets/EnemySprites/EnemySpriteUp.png")
+				_:
+					tex = load("res://Assets/EnemySprites/CivillianSpriteUp.png")
 		Vector2.DOWN:
-			tex = load("res://Assets/EnemySprites/EnemySpriteDown.png")
+			match EnemyStatus:
+				EnemyState.Target:
+					tex = load("res://Assets/EnemySprites/TargetSpriteDown.png")
+				EnemyState.Henchmen:
+					tex = load("res://Assets/EnemySprites/EnemySpriteDown.png")
+				_:
+					tex = load("res://Assets/EnemySprites/CivillianSpriteDown.png")
 		Vector2.LEFT:
-			tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
+			match EnemyStatus:
+				EnemyState.Target:
+					tex = load("res://Assets/EnemySprites/TargetSpriteLeft.png")
+				EnemyState.Henchmen:
+					tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
+				_:
+					tex = load("res://Assets/EnemySprites/CivillianSpriteLeft.png")
 		Vector2.RIGHT, _:
-			tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
+			match EnemyStatus:
+				EnemyState.Target:
+					tex = load("res://Assets/EnemySprites/TargetSpriteRight.png")
+				EnemyState.Henchmen:
+					tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
+				_:
+					tex = load("res://Assets/EnemySprites/CivillianSpriteRight.png")
 	$Sprite2D.texture = tex
 	
 func turnedStone():
