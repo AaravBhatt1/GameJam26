@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ceyqtcqc1wmhf"]
+
+[ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_pc8b0"]
+
+[node name="StartGameButton" unique_id=1288137410 instance=ExtResource("1_pc8b0")]
+
+[node name="Label" parent="." index="0" unique_id=1070044622]
+text = "START GAME"
