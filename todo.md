@@ -1,0 +1,3 @@
+- [ ] check change to 32 x 32 works 
+- [ ] add mirrors
+- [ ]  

@@ -1,10 +1,9 @@
-[gd_scene format=4 uid="uid://ckokupin1jhmt"]
+[gd_scene load_steps=5 format=4 uid="uid://ckokupin1jhmt"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_fuudy"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_xylue"]
 [ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_ienac"]
-[ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="5_wqkje"]
+[ext_resource type="PackedScene" uid="uid://w7i6g3pajsdn" path="res://Scenes/Person.tscn" id="4_ienac"]
 
 [node name="Level2" type="Node2D" unique_id=323625987]
 scale = Vector2(5.2, 5.2)
