@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7mcgick6mn5m"]
 
 [ext_resource type="Script" uid="uid://davs4k6own3p0" path="res://Scenes/UIButtons/MenuButton.gd" id="1_udx8l"]
-[ext_resource type="AudioStream" uid="uid://dtaw745sjbxwy" path="res://Assets/SoundEffects/box.wav" id="2_6vipt"]
+[ext_resource type="AudioStream" uid="uid://dd4tw1ssxhu36" path="res://Assets/SoundEffects/click.wav" id="2_6vipt"]
 
 [node name="MenuButton" type="Button" unique_id=1288137410]
 custom_minimum_size = Vector2(360, 60)
