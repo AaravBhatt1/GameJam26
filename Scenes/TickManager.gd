@@ -1,11 +1,15 @@
 extends Node
 
 @onready var timer = $Timer
-@export var TICK_DURATION = 0.5
+@export var TICK_DURATION = 0.3
+
+var blocked = false
 
 func _process(_delta):
 	if not timer.is_stopped():
 		return
+		
+	if blocked: return
 
 	var dir = Vector2i.ZERO
 	

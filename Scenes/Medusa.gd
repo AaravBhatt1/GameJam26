@@ -37,7 +37,7 @@ func animate_move(move_vector: Vector2):
 	moving = true
 	$AnimatedSprite2D.play("walk-sideways")
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + move_vector, 0.5).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(self, "position", position + move_vector, 0.3).set_trans(Tween.TRANS_LINEAR)
 	tween.finished.connect(
 		func():
 			moving = false

@@ -52,9 +52,13 @@ func turnedStone():
 	match EnemyStatus:
 		EnemyState.Target:
 			print("Round won")
+			var target = get_tree().current_scene.find_child("TickManager")
+			target.blocked = true
 			ReplaceWithBox()
 		EnemyState.Civillian:
 			print("Round failed")
+			var target = get_tree().current_scene.find_child("TickManager")
+			target.blocked = true
 			ReplaceWithBox()
 		_:
 			print ("Turned to Stone")
