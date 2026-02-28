@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+func _ready() -> void:
+	$AudioStreamPlayer2.play()
+
 func PlaySound():
 	$AudioStreamPlayer.play()
 

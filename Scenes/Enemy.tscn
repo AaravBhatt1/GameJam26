@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://72rlqcnq2xhd"]
+[gd_scene format=3 uid="uid://72rlqcnq2xhd"]
 
 [ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="1_wovta"]
 [ext_resource type="Texture2D" uid="uid://bs5qhxv7vd5vt" path="res://Assets/EnemySprites/EnemySpriteRight.png" id="2_wovta"]
