@@ -40,7 +40,7 @@ func animate_move(move_vector: Vector2):
 	tween.finished.connect(
 		func():
 			moving = false
-			fireRay(move_vector)
+			fireRay()
 			$AnimatedSprite2D.stop()
 	)
 
