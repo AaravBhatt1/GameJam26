@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ufuuiyjaohtv"
-path="res://.godot/imported/Walkinganim.png-fdc87f4daa393940394814218f6d35b2.ctex"
+uid="uid://626bnn5r6l8y"
+path="res://.godot/imported/floortiles.png-2ccc69d0386174dee5ece4e82dd3ea11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Walkinganim.png"
-dest_files=["res://.godot/imported/Walkinganim.png-fdc87f4daa393940394814218f6d35b2.ctex"]
+source_file="res://Assets/floortiles.png"
+dest_files=["res://.godot/imported/floortiles.png-2ccc69d0386174dee5ece4e82dd3ea11.ctex"]
 
 [params]
 

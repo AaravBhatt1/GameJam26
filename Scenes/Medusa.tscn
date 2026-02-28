@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://6hqmwbsaiu0i"]
 
 [ext_resource type="Script" uid="uid://dge57fcsghveg" path="res://Scenes/Medusa.gd" id="1_od7hl"]
-[ext_resource type="Texture2D" uid="uid://ufuuiyjaohtv" path="res://Assets/Walkinganim.png" id="2_fm03r"]
+[ext_resource type="Texture2D" uid="uid://ufuuiyjaohtv" path="res://Assets/MedusaSprites/Walkinganim.png" id="2_fm03r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic1qj"]
 size = Vector2(14, 14)
