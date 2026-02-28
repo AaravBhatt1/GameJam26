@@ -40,7 +40,7 @@ alignment = 1
 
 [node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1223309158 instance=ExtResource("1_853f1")]
 layout_mode = 2
-SceneToLoad = "res://Scenes/level.tscn"
+SceneToLoad = "res://Scenes/level1.tscn"
 
 [node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=2057252405 instance=ExtResource("2_8saeu")]
 layout_mode = 2
