@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://qlaq2opm0tv7"]
+
+[ext_resource type="Shader" uid="uid://crrnkat86o1oj" path="res://Scenes/backgound.gdshader" id="1_xl3lb"]
+[ext_resource type="Texture2D" uid="uid://dpqcd0v6ya4dj" path="res://Scenes/bgpattern.png" id="2_xbkox"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbkox"]
+shader = ExtResource("1_xl3lb")
+shader_parameter/tiling = Vector2(1, 1)
+shader_parameter/offset = Vector2(0.1, 0.1)
+shader_parameter/light_color = Color(0.584235, 0.54629, 1, 1)
+shader_parameter/dark_color = Color(0.260147, 0.0379372, 0.72167, 1)
+
+[node name="Backgound" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_xbkox")
+texture = ExtResource("2_xbkox")
+region_enabled = true
+region_rect = Rect2(0, 0, 4000, 2000)

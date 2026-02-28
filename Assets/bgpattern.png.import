@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgx8w2c1qdmsm"
-path="res://.godot/imported/TargetSpriteUp.png-307111f505c4b2491751127068722415.ctex"
+uid="uid://cox4uuukwanxc"
+path="res://.godot/imported/bgpattern.png-85052c18ec933e5c1d217efb928c450d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/EnemySprites/TargetSpriteUp.png"
-dest_files=["res://.godot/imported/TargetSpriteUp.png-307111f505c4b2491751127068722415.ctex"]
+source_file="res://Assets/bgpattern.png"
+dest_files=["res://.godot/imported/bgpattern.png-85052c18ec933e5c1d217efb928c450d.ctex"]
 
 [params]
 

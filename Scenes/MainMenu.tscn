@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhnkspdg0f10h"]
+[gd_scene load_steps=7 format=3 uid="uid://bhnkspdg0f10h"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
-[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
+[ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
 [ext_resource type="PackedScene" uid="uid://bowh0inis067x" path="res://Scenes/UIButtons/QuitButton.tscn" id="2_8saeu"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="3_8saeu"]
+[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="5_df05h"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bnhvo"]
 size = Vector2(500, 100)
@@ -54,5 +55,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Backgound" parent="." instance=ExtResource("5_df05h")]
+z_index = -4096
 
 [connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]
