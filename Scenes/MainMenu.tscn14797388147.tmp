@@ -44,10 +44,8 @@ SceneToLoad = "res://level.tscn"
 
 [node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=549240663 instance=ExtResource("2_8saeu")]
 layout_mode = 2
-SceneToLoad = "Quit"
 
 [node name="FadeIn" parent="." unique_id=151081257 instance=ExtResource("3_8saeu")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 color = Color(0, 0, 0, 0)

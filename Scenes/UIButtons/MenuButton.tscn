@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://b7mcgick6mn5m"]
 
+[ext_resource type="Script" uid="uid://davs4k6own3p0" path="res://Scenes/UIButtons/MenuButton.gd" id="1_udx8l"]
+
 [node name="MenuButton" type="Button" unique_id=1288137410]
 custom_minimum_size = Vector2(360, 60)
+script = ExtResource("1_udx8l")
 
 [node name="Label" type="Label" parent="." unique_id=1070044622]
 layout_mode = 0
