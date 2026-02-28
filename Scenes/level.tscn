@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=4 uid="uid://id0kal7ncvhm"]
+[gd_scene load_steps=4 format=4 uid="uid://id0kal7ncvhm"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://bk1on7ui7tnsr" path="res://Scenes/Medusa.tscn" id="3_6phgx"]
+[ext_resource type="Script" uid="uid://8hlktwadq2n" path="res://Scenes/TickManager.gd" id="3_81xng"]
 
-[node name="Level2" type="Node2D"]
+[node name="Level" type="Node2D"]
 scale = Vector2(4, 4)
 
 [node name="Camera" type="Camera2D" parent="."]
@@ -15,3 +16,9 @@ tile_set = ExtResource("1_u52ul")
 
 [node name="Medusa" parent="." instance=ExtResource("3_6phgx")]
 position = Vector2(-8, -8)
+
+[node name="TickManager" type="Node" parent="."]
+script = ExtResource("3_81xng")
+
+[node name="Timer" type="Timer" parent="TickManager"]
+one_shot = true
