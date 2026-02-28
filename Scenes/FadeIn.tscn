@@ -1,4 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://7swtchmkmjtc"]
+[gd_scene format=3 uid="uid://7swtchmkmjtc"]
+
+[ext_resource type="Script" uid="uid://d1vutufdh11gf" path="res://Scenes/FadeIn.gd" id="1_6ppj7"]
 
 [sub_resource type="Animation" id="Animation_dc0qv"]
 resource_name = "FadeInAnim"
@@ -45,7 +47,10 @@ offset_right = 1152.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
+script = ExtResource("1_6ppj7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1185989794]
 libraries/ = SubResource("AnimationLibrary_5djug")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

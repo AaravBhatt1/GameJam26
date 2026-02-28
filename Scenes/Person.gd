@@ -1,7 +1,7 @@
 class_name Enemy
 
 extends CharacterBody2D
-
+signal LevelWon
 @export var CurrentDirection = Vector2.DOWN
 enum EnemyState {Target, Civillian, Henchmen}
 @export var EnemyStatus : EnemyState
@@ -51,7 +51,7 @@ func turnedStone():
 	match EnemyStatus:
 		EnemyState.Target:
 			print("Round won")
-			ReplaceWithBox()
+			ReplaceWithBox(true)
 		EnemyState.Civillian:
 			print("Round failed")
 			ReplaceWithBox()
@@ -59,9 +59,14 @@ func turnedStone():
 			print ("Turned to Stone")
 			ReplaceWithBox()
 			
-func ReplaceWithBox():
+func ReplaceWithBox(Target = false):
 	var box_scene = load("res://Scenes/pushable.tscn")
 	var box = box_scene.instantiate()
 	add_sibling(box)
 	box.global_position = self.global_position
+	if Target:
+		LevelWon.emit()
+		
+		
 	queue_free()
+	

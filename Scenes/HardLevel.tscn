@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_88wy2"]
 [ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_3q6hg"]
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_foxwe"]
-[ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="5_6lcqu"]
+[ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_88wy2"]
 
 [node name="Level2" type="Node2D" unique_id=323625987]
 scale = Vector2(5.2, 5.2)
@@ -27,54 +27,49 @@ one_shot = true
 
 [node name="God" parent="." unique_id=376682870 instance=ExtResource("4_foxwe")]
 position = Vector2(88, -24)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(-1, 0)
 
 [node name="Civillian" parent="." unique_id=1848835880 instance=ExtResource("4_foxwe")]
 position = Vector2(-88, -56)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
 [node name="Henchman" parent="." unique_id=1722558784 instance=ExtResource("4_foxwe")]
 position = Vector2(72, -24)
-script = ExtResource("5_6lcqu")
 EnemyStatus = 2
 
 [node name="Civillian2" parent="." unique_id=1635802173 instance=ExtResource("4_foxwe")]
 position = Vector2(-88, -40)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
 [node name="Civillian3" parent="." unique_id=962564558 instance=ExtResource("4_foxwe")]
 position = Vector2(-88, -24)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
 [node name="Civillian4" parent="." unique_id=1535547273 instance=ExtResource("4_foxwe")]
 position = Vector2(-88, 24)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
 [node name="Henchman2" parent="." unique_id=556932766 instance=ExtResource("4_foxwe")]
 position = Vector2(8, 40)
 up_direction = Vector2(0, 1)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(0, -1)
 EnemyStatus = 2
 
 [node name="Henchman3" parent="." unique_id=201318319 instance=ExtResource("4_foxwe")]
 position = Vector2(-8, 40)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(0, -1)
 EnemyStatus = 2
 
 [node name="Henchman4" parent="." unique_id=173221544 instance=ExtResource("4_foxwe")]
 position = Vector2(-72, 8)
 up_direction = Vector2(0, 1)
-script = ExtResource("5_6lcqu")
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 2
+
+[node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_88wy2")]
+position = Vector2(-576, -324)
+LevelToLoad = "res://Scenes/MainMenu.tscn"
