@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://dddfowyysi8kr"]
+[gd_scene format=3 uid="uid://dddfowyysi8kr"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
@@ -40,7 +40,7 @@ alignment = 1
 
 [node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1288137410 instance=ExtResource("1_853f1")]
 layout_mode = 2
-SceneToLoad = "res://level.tscn"
+SceneToLoad = "res://Scenes/level.tscn"
 
 [node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=549240663 instance=ExtResource("2_8saeu")]
 layout_mode = 2
@@ -50,4 +50,8 @@ SceneToLoad = "Quit"
 visible = false
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 color = Color(0, 0, 0, 0)
