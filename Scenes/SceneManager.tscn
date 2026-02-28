@@ -15,6 +15,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FadeIn" parent="Control" unique_id=151081257 instance=ExtResource("2_ebsso")]
-layout_mode = 1
+custom_minimum_size = Vector2(0.035, 0)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="fadeFinished" from="Control/FadeIn" to="." method="_on_fade_in_fade_finished"]

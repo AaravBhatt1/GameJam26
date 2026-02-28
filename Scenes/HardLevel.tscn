@@ -71,5 +71,4 @@ CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 2
 
 [node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_88wy2")]
-position = Vector2(-576, -324)
 LevelToLoad = "res://Scenes/MainMenu.tscn"
