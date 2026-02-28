@@ -73,3 +73,12 @@ func fireRay(facingDirection: Vector2):
 					if collider.CurrentDirection == PlayerLine:
 						if collider.has_method("turnedStone"):
 							collider.turnedStone()
+			if collider.is_in_group("Mirror"):
+				var player_line = (ray.global_position - collider.global_position).normalized()
+				var new_dir = collider.reflectray(player_line)
+				var hit_point = ray.get_collision_point()
+				# Move ray origin slightly along reflection direction
+				ray.global_position = hit_point + new_dir * 0.01
+				ray.target_position = new_dir * MAX_DISTANCE
+				ray.force_raycast_update()
+								
