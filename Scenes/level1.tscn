@@ -37,4 +37,4 @@ CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
 [node name="SceneManager" parent="." instance=ExtResource("5_y4dr7")]
-LevelToLoad = "res://Scenes/level.tscn"
+LevelToLoad = "res://Scenes/level2.tscn"
