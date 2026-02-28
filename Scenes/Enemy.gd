@@ -27,8 +27,10 @@ func turnedStone():
 	match EnemyStatus:
 		EnemyState.Target:
 			print("Round won")
+			ReplaceWithBox()
 		EnemyState.Civillian:
 			print("Round failed")
+			ReplaceWithBox()
 		_:
 			print ("Turned to Stone")
 			ReplaceWithBox()
