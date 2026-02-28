@@ -1,51 +1,33 @@
-extends Area2D
+extends CharacterBody2D # Switched from Area2D
 
-var TILE_SIZE = 32
-var ANIMATION_SPEED = 4
+@export var TILE_SIZE = 16
+@export var ANIMATION_SPEED = 4.0
 
-enum Direction {UP, DOWN, LEFT, RIGHT }
-
-var facingDirection : Direction
 var moving : bool = false
-@onready var ray = $PlayerMovementRaycast
 
 func _process(_delta: float) -> void:
-	getInput()
+	if not moving:
+		get_input()
 
+func get_input():
+	var dir = Vector2.ZERO
+	if Input.is_action_just_pressed("MoveUp"):    dir = Vector2.UP
+	elif Input.is_action_just_pressed("MoveDown"): dir = Vector2.DOWN
+	elif Input.is_action_just_pressed("MoveLeft"): dir = Vector2.LEFT
+	elif Input.is_action_just_pressed("MoveRight"): dir = Vector2.RIGHT
+	
+	if dir != Vector2.ZERO:
+		try_move(dir * TILE_SIZE)
 
-func getInput():
-	if (Input.is_action_just_pressed("MoveUp")):
-		facingDirection = Direction.UP
-		Move()
-	elif (Input.is_action_just_pressed("MoveDown")):
-		facingDirection = Direction.DOWN#
-		Move()
-	elif (Input.is_action_just_pressed("MoveLeft")):
-		facingDirection = Direction.LEFT
-		Move()
-	elif (Input.is_action_just_pressed("MoveRight")):
-		facingDirection = Direction.RIGHT
-		Move()
+func try_move(move_vector: Vector2):
+	# test_move() checks if we hit a wall using CharacterBody2D
+	if not test_move(global_transform, move_vector):
+		animate_move(move_vector)
 
-func Move():
-	if !moving:
-		match facingDirection:
-			Direction.UP:
-				TryMove(Vector2(0,-TILE_SIZE))
-			Direction.DOWN:
-				TryMove(Vector2(0,TILE_SIZE))
-			Direction.LEFT:
-				TryMove(Vector2(-TILE_SIZE, 0))
-			Direction.RIGHT:
-				TryMove(Vector2(TILE_SIZE,0))
-
-func TryMove(MoveVector : Vector2):
-	ray.target_position = MoveVector
-	ray.force_raycast_update()
-	if !ray.is_colliding():
-		var tween = create_tween()
-		tween.tween_property(self, "position", 
-		position + MoveVector*2, 1.0/ANIMATION_SPEED).set_trans(Tween.TRANS_SINE)
-		moving = true
-		await tween.finished
-		moving = false
+func animate_move(move_vector: Vector2):
+	moving = true
+	var tween = create_tween()
+	tween.tween_property(self, "position", position + move_vector, 1.0 / ANIMATION_SPEED).set_trans(Tween.TRANS_SINE)
+	
+	await tween.finished
+	moving = false
