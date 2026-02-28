@@ -6,13 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fd37"]
 size = Vector2(14, 14)
 
-[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+[node name="Enemy" type="CharacterBody2D" unique_id=645599160 groups=["Enemy"]]
 collision_mask = 3
 script = ExtResource("1_m1htj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1902777655]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_wovta")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898336046]
 shape = SubResource("RectangleShape2D_7fd37")

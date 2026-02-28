@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ilmbsdrhbq14"]
 
 [ext_resource type="Script" uid="uid://cc6l1sh0e46k4" path="res://Scenes/pushable.gd" id="1_3wuyb"]
-[ext_resource type="AudioStream" uid="uid://cfgqlwlm7ju5g" path="res://Assets/SoundEffects/box.wav" id="2_js75i"]
+[ext_resource type="AudioStream" uid="uid://dtaw745sjbxwy" path="res://Assets/SoundEffects/box.wav" id="2_js75i"]
+[ext_resource type="AudioStream" uid="uid://df70ri2d8frnf" path="res://Assets/SoundEffects/Stonifying.wav" id="3_cbo6s"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uwp7h"]
 size = Vector2(16, 16)
@@ -24,3 +25,6 @@ shape = SubResource("RectangleShape2D_7fd37")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1482437101]
 stream = ExtResource("2_js75i")
 volume_db = -10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1230847020]
+stream = ExtResource("3_cbo6s")
