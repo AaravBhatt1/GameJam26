@@ -8,6 +8,8 @@ func _ready():
 		enemy.LevelWon.connect(LoadLevel)
 	for enemy in get_tree().get_nodes_in_group("Enemy"):
 		enemy.LevelFailed.connect(ReloadLevel)
+	for medusa in get_tree().get_nodes_in_group("Medusa"):
+		medusa.LevelFailed.connect(ReloadLevel)
 
 func LoadLevel():
 	$Control/FadeIn.show()

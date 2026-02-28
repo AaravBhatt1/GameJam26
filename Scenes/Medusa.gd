@@ -3,10 +3,10 @@ extends CharacterBody2D
 
 @export var TILE_SIZE = 16
 @export var MAX_DISTANCE := 1000.0
-
+signal LevelFailed
 @onready var ray: RayCast2D = $RayCast2D
 
-
+var last_facing_dir = Vector2.DOWN
 var moving : bool = false
 
 func _ready() -> void:
@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _onTick(dir: Vector2) -> void:
 	if dir != Vector2.ZERO:
+		last_facing_dir = dir
 		ChangeSprite(dir)
 		try_move(dir * TILE_SIZE)
 	else:
@@ -61,28 +62,42 @@ func ChangeSprite(dir : Vector2):
 	#$PlayerSprite.texture = tex
 	return
 
-#Fires a ray and checks for collisions
 func fireRay():
 	var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
-
-	for dir in directions:
-		ray.target_position = dir * MAX_DISTANCE
-		ray.force_raycast_update()
-
-		#Checks if enemy has seen you
-		if ray.is_colliding():
+	
+	for start_dir in directions:
+		var is_facing_this_way = (start_dir == last_facing_dir)
+		var current_dir = start_dir
+		var current_origin = global_position 
+		var hits_remaining = 100 
+		while hits_remaining > 0:
+			ray.global_position = current_origin
+			ray.target_position = current_dir * MAX_DISTANCE
+			ray.force_raycast_update()
+			if not ray.is_colliding():
+				break
 			var collider = ray.get_collider()
+			var hit_point = ray.get_collision_point()
 			if collider.is_in_group("Enemy"):
 				if "CurrentDirection" in collider:
-					var PlayerLine = (global_position - collider.global_position).normalized()
-					if collider.CurrentDirection == PlayerLine:
+					# Enemy faces the incoming ray
+					if collider.CurrentDirection.is_equal_approx(-current_dir):
 						if collider.has_method("turnedStone"):
 							collider.turnedStone()
-			if collider.is_in_group("Mirror"):
-				var player_line = (ray.global_position - collider.global_position).normalized()
-				var new_dir = collider.reflectray(player_line)
-				var hit_point = ray.get_collision_point()
-				# Move ray origin slightly along reflection direction
-				ray.global_position = hit_point + new_dir * 0.01
-				ray.target_position = new_dir * MAX_DISTANCE
-				ray.force_raycast_update()
+				break 
+			elif collider.is_in_group("Mirror"):
+				var next_dir = collider.reflectray(-current_dir)
+				if next_dir == null:
+					break
+				current_dir = next_dir
+				current_origin = collider.global_position + (current_dir * 8)
+				hits_remaining -= 1
+			elif collider.is_in_group("Medusa"):
+				if is_facing_this_way:
+					print("Died - Saw own reflection")
+					LevelFailed.emit()
+				break
+			else:
+				break
+			
+	ray.position = Vector2.ZERO
