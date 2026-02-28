@@ -1,7 +1,7 @@
 extends Node
 
 @onready var timer = $Timer
-@export var TICK_DURATION = 0.3
+@export var TICK_DURATION = 0.5
 
 func _process(_delta):
 	if not timer.is_stopped():

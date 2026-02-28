@@ -34,12 +34,14 @@ func try_move(move_vector: Vector2):
 
 func animate_move(move_vector: Vector2):
 	moving = true
+	$AnimatedSprite2D.play("walk-sideways")
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + move_vector, 0.2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "position", position + move_vector, 0.5).set_trans(Tween.TRANS_LINEAR)
 	tween.finished.connect(
 		func(): 
 			moving = false
 			fireRay(move_vector)
+			$AnimatedSprite2D.stop()
 	)
 	
 #Changes sprite to one facing in the correct direction
@@ -52,9 +54,12 @@ func ChangeSprite(dir : Vector2):
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteDown.png")
 		Vector2.LEFT:
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteLeft.png")
+			$AnimatedSprite2D.flip_h = true
 		Vector2.RIGHT:
+			$AnimatedSprite2D.flip_h = false
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteRight.png")
-	$PlayerSprite.texture = tex
+	#$PlayerSprite.texture = tex
+	return
 	
 #Fires a ray and checks for collisions
 func fireRay(facingDirection: Vector2):

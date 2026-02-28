@@ -1,21 +1,86 @@
-[gd_scene load_steps=4 format=3 uid="uid://6hqmwbsaiu0i"]
+[gd_scene load_steps=13 format=3 uid="uid://6hqmwbsaiu0i"]
 
 [ext_resource type="Script" uid="uid://dge57fcsghveg" path="res://Scenes/Medusa.gd" id="1_od7hl"]
-[ext_resource type="Texture2D" uid="uid://26jkyjiojvni" path="res://Assets/MedusaSprites/MedusaSpriteUp.png" id="2_fm03r"]
+[ext_resource type="Texture2D" uid="uid://ufuuiyjaohtv" path="res://Assets/Walkinganim.png" id="2_fm03r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic1qj"]
 size = Vector2(14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn12q"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(0, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rcxf"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(34, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toy2h"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(68, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hikbx"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(102, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7hbm"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(136, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh7do"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(170, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1osp3"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(204, 0, 34, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_th8gg"]
+atlas = ExtResource("2_fm03r")
+region = Rect2(238, 0, 34, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xourp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn12q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rcxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toy2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hikbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7hbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh7do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1osp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_th8gg")
+}],
+"loop": true,
+"name": &"walk-sideways",
+"speed": 10.0
+}]
 
 [node name="Medusa" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_od7hl")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_fm03r")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ic1qj")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xourp")
+animation = &"walk-sideways"

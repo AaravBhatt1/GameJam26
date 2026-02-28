@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cmc0600phx1ft"]
+[gd_scene load_steps=0 format=4 uid="uid://cmc0600phx1ft"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_q4ky2"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_88wy2"]

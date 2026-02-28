@@ -20,4 +20,4 @@ func try_push(direction: Vector2) -> bool:
 func animate_move(move_vec):
 	var target_pos = position + move_vec
 	var tween = create_tween()
-	tween.tween_property(self, "position", target_pos, 0.2).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "position", target_pos, 0.5).set_trans(Tween.TRANS_LINEAR)
