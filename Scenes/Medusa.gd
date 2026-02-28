@@ -15,9 +15,9 @@ func _ready() -> void:
 func _onTick(dir: Vector2) -> void:
 	if dir != Vector2.ZERO:
 		ChangeSprite(dir)
-		await try_move(dir * TILE_SIZE)
-		
-	fireRay(dir)
+		try_move(dir * TILE_SIZE)
+	else:
+		fireRay(dir)
 
 func try_move(move_vector: Vector2):
 	
@@ -36,7 +36,11 @@ func animate_move(move_vector: Vector2):
 	moving = true
 	var tween = create_tween()
 	tween.tween_property(self, "position", position + move_vector, 0.2).set_trans(Tween.TRANS_SINE)
-	tween.finished.connect(func(): moving = false)
+	tween.finished.connect(
+		func(): 
+			moving = false
+			fireRay(move_vector)
+	)
 	
 #Changes sprite to one facing in the correct direction
 func ChangeSprite(dir : Vector2):

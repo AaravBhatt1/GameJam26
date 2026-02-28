@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://7swtchmkmjtc"]
+[gd_scene load_steps=0 format=3 uid="uid://7swtchmkmjtc"]
 
 [sub_resource type="Animation" id="Animation_dc0qv"]
 resource_name = "FadeInAnim"
