@@ -9,6 +9,7 @@ size = Vector2(16, 16)
 size = Vector2(14, 14)
 
 [node name="Pushable" type="CharacterBody2D" groups=["Enemy"]]
+collision_mask = 3
 slide_on_ceiling = false
 floor_stop_on_slope = false
 script = ExtResource("1_3wuyb")

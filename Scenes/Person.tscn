@@ -7,6 +7,7 @@
 size = Vector2(14, 14)
 
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_mask = 3
 script = ExtResource("1_m1htj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

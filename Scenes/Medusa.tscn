@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://6hqmwbsaiu0i"]
+[gd_scene load_steps=4 format=3 uid="uid://6hqmwbsaiu0i"]
 
 [ext_resource type="Script" uid="uid://dge57fcsghveg" path="res://Scenes/Medusa.gd" id="1_od7hl"]
 [ext_resource type="Texture2D" uid="uid://26jkyjiojvni" path="res://Assets/MedusaSprites/MedusaSpriteUp.png" id="2_fm03r"]
@@ -6,15 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic1qj"]
 size = Vector2(14, 14)
 
-[node name="Medusa" type="CharacterBody2D" unique_id=1592571678]
-collision_layer = 2
+[node name="Medusa" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_od7hl")
 
-[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=24146855]
+[node name="PlayerSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_fm03r")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=795232760]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ic1qj")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1067817308]
+[node name="RayCast2D" type="RayCast2D" parent="."]
