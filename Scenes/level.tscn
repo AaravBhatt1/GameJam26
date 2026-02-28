@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_fuudy"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_xylue"]
 [ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_tj5wv"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemy.tscn" id="4_ienac"]
+[ext_resource type="PackedScene" uid="uid://bjqefyonokmgv" path="res://Scenes/Enemy.tscn" id="4_ienac"]
 
 [node name="Level" type="Node2D" unique_id=1617563029]
 scale = Vector2(4, 4)
@@ -16,7 +16,7 @@ tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAAAAP//AQAAAAAAAAD//wAAAQABAAA
 tile_set = ExtResource("1_fuudy")
 
 [node name="Medusa" parent="." unique_id=2007459527 instance=ExtResource("2_xylue")]
-position = Vector2(-8, -8)
+position = Vector2(8, -8)
 
 [node name="TickManager" type="Node" parent="." unique_id=438345086]
 script = ExtResource("3_tj5wv")
@@ -25,8 +25,18 @@ script = ExtResource("3_tj5wv")
 one_shot = true
 
 [node name="Enemy" parent="." unique_id=1809972288 instance=ExtResource("4_ienac")]
-position = Vector2(-72, -40)
+position = Vector2(-104, 24)
+CurrentDirection = Vector2(0, -1)
 
 [node name="Marker2D" type="Marker2D" parent="Enemy" unique_id=98761106]
 
 [node name="Marker2D2" type="Marker2D" parent="Enemy" unique_id=314005872]
+
+[node name="Enemy2" parent="." unique_id=2029493657 instance=ExtResource("4_ienac")]
+position = Vector2(72, -40)
+CurrentDirection = Vector2(-1, 0)
+EnemyStatus = 1
+
+[node name="Marker2D" type="Marker2D" parent="Enemy2" unique_id=1545028593]
+
+[node name="Marker2D2" type="Marker2D" parent="Enemy2" unique_id=155298012]

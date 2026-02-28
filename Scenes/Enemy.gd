@@ -3,6 +3,8 @@ class_name Enemy
 extends CharacterBody2D
 
 @export var CurrentDirection = Vector2.DOWN
+enum EnemyState {Target, Civillian, Henchmen}
+@export var EnemyStatus : EnemyState
 
 func _ready():
 	SetSprite()
@@ -17,6 +19,15 @@ func SetSprite():
 			tex = load("res://Assets/EnemySprites/EnemySpriteDown.png")
 		Vector2.LEFT:
 			tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
-		Vector2.RIGHT:
+		Vector2.RIGHT, _:
 			tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
 	$Sprite2D.texture = tex
+	
+func turnedStone():
+	match EnemyStatus:
+		EnemyState.Target:
+			print("Round won")
+		EnemyState.Civillian:
+			print("Round failed")
+		_:
+			print("Turned Stone")

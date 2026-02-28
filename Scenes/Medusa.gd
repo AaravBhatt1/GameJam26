@@ -62,4 +62,5 @@ func fireRay(facingDirection: Vector2):
 				if "CurrentDirection" in collider:
 					var PlayerLine = (global_position - collider.global_position).normalized()
 					if collider.CurrentDirection == PlayerLine:
-						print("Enemy turned to stone")
+						if collider.has_method("turnedStone"):
+							collider.turnedStone()
