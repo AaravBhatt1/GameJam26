@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
+func PlaySound():
+	$AudioStreamPlayer.play()
+
 func try_push(direction: Vector2) -> bool:
-	
+	PlaySound()
 	var move_vector = direction
 	# 1. Check if the space is clear
 	var collision = move_and_collide(move_vector, true)

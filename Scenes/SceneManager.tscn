@@ -1,7 +1,8 @@
-[gd_scene load_steps=0 format=3 uid="uid://cx2kfq3ag31ho"]
+[gd_scene format=3 uid="uid://cx2kfq3ag31ho"]
 
 [ext_resource type="Script" uid="uid://bbx78dxf4pbdq" path="res://SceneManager.gd" id="1_yueht"]
-[ext_resource type="PackedScene" uid="uid://7swtchmkmjtc" path="res://Scenes/FadeIn.tscn" id="2_ebsso"]
+[ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="2_ebsso"]
+[ext_resource type="AudioStream" uid="uid://cralhku7wmawe" path="res://Assets/SoundEffects/Game over.wav" id="3_hjya1"]
 
 [node name="SceneManager" type="Node2D" unique_id=1117967804]
 script = ExtResource("1_yueht")
@@ -27,4 +28,8 @@ offset_bottom = 324.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1661302745]
+stream = ExtResource("3_hjya1")
+
 [connection signal="fadeFinished" from="Control/FadeIn" to="." method="_on_fade_in_fade_finished"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

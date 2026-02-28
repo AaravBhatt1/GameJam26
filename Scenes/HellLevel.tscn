@@ -1,8 +1,8 @@
-[gd_scene load_steps=0 format=4 uid="uid://c8j8oykf6wdft"]
+[gd_scene format=4 uid="uid://c8j8oykf6wdft"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_1s6y6"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_5xav8"]
-[ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_h8fbx"]
+[ext_resource type="Script" uid="uid://8hlktwadq2n" path="res://Scenes/TickManager.gd" id="3_h8fbx"]
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_42i1y"]
 [ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="5_wjh0p"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_6xhgd"]

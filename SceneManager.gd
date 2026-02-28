@@ -17,8 +17,7 @@ func LoadLevel():
 	
 func ReloadLevel():
 	LevelFailed = true
-	$Control/FadeIn.show()
-	$Control/FadeIn.fadeIn()
+	$AudioStreamPlayer.play()
 
 
 
@@ -37,3 +36,8 @@ func _on_fade_in_fade_finished() -> void:
 			tree.change_scene_to_file(LevelToLoad)
 		else:
 			Engine.get_main_loop().change_scene_to_file(LevelToLoad)
+
+
+func _on_audio_stream_player_finished() -> void:
+	$Control/FadeIn.show()
+	$Control/FadeIn.fadeIn()

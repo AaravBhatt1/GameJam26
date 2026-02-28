@@ -16,12 +16,24 @@ func _onTick(dir: Vector2) -> void:
 	if dir != Vector2.ZERO:
 		last_facing_dir = dir
 		ChangeSprite(dir)
+		playSound()
 		try_move(dir * TILE_SIZE)
 	else:
 		fireRay()
+		
+func playSound():
+	var choice = randf()
+	if (choice < 0.25):
+		$MedusaSoundEffects/GrassWalk1.play()
+	elif (choice < 0.5):
+		$MedusaSoundEffects/GrassWalk2.play()
+	elif (choice < 0.75):
+		$MedusaSoundEffects/GrassWalk3.play()
+	else:
+		$MedusaSoundEffects/GrassWalk4.play()
 
 func try_move(move_vector: Vector2):
-
+	
 	var collision = move_and_collide(move_vector, true)
 	if collision == null:
 		animate_move(move_vector)
