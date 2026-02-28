@@ -16,12 +16,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="GameJam26"
 run/main_scene="uid://dddfowyysi8kr"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameTick="*res://GameTick.gd"
+Settingstore="*res://settingstore.gd"
 
 [display]
 
