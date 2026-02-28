@@ -30,12 +30,12 @@ func turnedStone():
 		EnemyState.Civillian:
 			print("Round failed")
 		_:
+			print ("Turned to Stone")
 			ReplaceWithBox()
 			
 func ReplaceWithBox():
-	var box_scene = load("res://Scenes/PushableBox.tscn")
+	var box_scene = load("res://Scenes/pushable.tscn")
 	var box = box_scene.instantiate()
-
+	add_sibling(box)
 	box.global_position = self.global_position
-	get_parent().add_child(box)
 	queue_free()
