@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dddfowyysi8kr"]
+[gd_scene load_steps=0 format=3 uid="uid://dddfowyysi8kr"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="PackedScene" uid="uid://bowh0inis067x" path="res://Scenes/UIButtons/QuitButton.tscn" id="2_8saeu"]

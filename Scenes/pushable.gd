@@ -1,0 +1,23 @@
+extends CharacterBody2D
+
+func try_push(direction: Vector2) -> bool:
+	
+	var move_vector = direction
+	# 1. Check if the space is clear
+	var collision = move_and_collide(move_vector, true)
+	if collision == null: 
+		animate_move(move_vector)
+		return true
+	else:
+		var target = collision.get_collider()
+		if target.has_method("try_push"):
+			if target.try_push(move_vector):
+				animate_move(move_vector)
+				return true
+	
+	return false
+
+func animate_move(move_vec):
+	var target_pos = position + move_vec
+	var tween = create_tween()
+	tween.tween_property(self, "position", target_pos, 0.2).set_trans(Tween.TRANS_SINE)

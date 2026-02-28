@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ilmbsdrhbq14"]
+
+[ext_resource type="Script" uid="uid://cc6l1sh0e46k4" path="res://Scenes/pushable.gd" id="1_3wuyb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uwp7h"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fd37"]
+size = Vector2(14, 14)
+
+[node name="Pushable" type="CharacterBody2D" groups=["Enemy"]]
+slide_on_ceiling = false
+floor_stop_on_slope = false
+script = ExtResource("1_3wuyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_uwp7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7fd37")
