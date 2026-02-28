@@ -51,15 +51,18 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(24, 88)
 scale = Vector2(0.99999976, 0.99999976)
 direction = false
+backwards = true
 
 [node name="Mirror4" parent="." unique_id=67702432 instance=ExtResource("5_wjh0p")]
 position = Vector2(-104, 72)
 scale = Vector2(0.9999996, 0.9999996)
+backwards = true
 
 [node name="Mirror5" parent="." unique_id=1515386012 instance=ExtResource("5_wjh0p")]
 position = Vector2(-23.999985, 72.00002)
 scale = Vector2(0.99999917, 0.99999917)
 direction = false
+backwards = true
 
 [node name="Mirror6" parent="." unique_id=1135003858 instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 24)
@@ -69,6 +72,7 @@ direction = false
 [node name="Mirror7" parent="." unique_id=751025457 instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 88)
 scale = Vector2(0.9999963, 0.9999963)
+backwards = true
 
 [node name="Mirror8" parent="." unique_id=61759174 instance=ExtResource("5_wjh0p")]
 position = Vector2(-24, 40)

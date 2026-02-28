@@ -2,6 +2,7 @@ extends Node2D
 
 # true is top left to bottom right of the cell
 @export var direction:bool = true
+@export var backwards:bool = false
 
 func reflectray(playerLine:Vector2):
 	match playerLine:
@@ -26,7 +27,13 @@ func reflectray(playerLine:Vector2):
 func _ready() -> void:
 	var tex;
 	if direction:
-		tex = load("res://Assets/MirrorSprites/MirrorTLBR.png")
+		if backwards:
+			tex = load("res://Assets/MirrorSprites/MirrorTLBR2.png")
+		else:
+			tex = load("res://Assets/MirrorSprites/MirrorTLBR.png")
 	else:
-		tex = load("res://Assets/MirrorSprites/MirrorBLTR.png")
+		if backwards:
+			tex = load("res://Assets/MirrorSprites/MirrorBLTR2.png")
+		else:
+			tex = load("res://Assets/MirrorSprites/MirrorBLTR.png")
 	$Sprite2D.texture = tex;
