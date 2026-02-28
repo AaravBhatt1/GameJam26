@@ -11,10 +11,18 @@ func _process(_delta: float) -> void:
 
 func get_input():
 	var dir = Vector2.ZERO
-	if Input.is_action_just_pressed("MoveUp"):    dir = Vector2.UP
-	elif Input.is_action_just_pressed("MoveDown"): dir = Vector2.DOWN
-	elif Input.is_action_just_pressed("MoveLeft"): dir = Vector2.LEFT
-	elif Input.is_action_just_pressed("MoveRight"): dir = Vector2.RIGHT
+	if Input.is_action_just_pressed("MoveUp"):    
+		dir = Vector2.UP
+		ChangeSprite("res://Assets/MedusaSprites/MedusaSpriteUp.png")
+	elif Input.is_action_just_pressed("MoveDown"): 
+		dir = Vector2.DOWN
+		ChangeSprite("res://Assets/MedusaSprites/MedusaSpriteDown.png")
+	elif Input.is_action_just_pressed("MoveLeft"): 
+		dir = Vector2.LEFT
+		ChangeSprite("res://Assets/MedusaSprites/MedusaSpriteLeft.png")
+	elif Input.is_action_just_pressed("MoveRight"): 
+		dir = Vector2.RIGHT
+		ChangeSprite("res://Assets/MedusaSprites/MedusaSpriteRight.png")
 	
 	if dir != Vector2.ZERO:
 		try_move(dir * TILE_SIZE)
@@ -31,3 +39,7 @@ func animate_move(move_vector: Vector2):
 	
 	await tween.finished
 	moving = false
+	
+func ChangeSprite(SpritePath : String):
+	print("Runninga")
+	$PlayerSprite.texture = load("res://Assets/MedusaSprites/MedusaSpriteLeft.png")

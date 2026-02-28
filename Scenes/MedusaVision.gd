@@ -8,6 +8,9 @@ var facingDirection : Direction
 
 @onready var ray: RayCast2D = $RayCast2D
 
+func _onTick():
+	fire(facingDirection)
+
 @export var max_distance := 1000.0
 func resolveDirection():
 	match facingDirection:

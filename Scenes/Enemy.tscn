@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://w7i6g3pajsdn"]
+[gd_scene format=3 uid="uid://w7i6g3pajsdn"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m1htj"]
 size = Vector2(16, 16)

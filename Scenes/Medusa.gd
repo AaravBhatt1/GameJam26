@@ -1,5 +1,6 @@
 extends CharacterBody2D # Switched from Area2D
 
+
 @export var TILE_SIZE = 16
 @export var ANIMATION_SPEED = 4.0
 
@@ -12,6 +13,7 @@ func _onTick(dir: Vector2) -> void:
 
 	if dir != Vector2.ZERO:
 		try_move(dir * TILE_SIZE)
+		ChangeSprite(dir)
 
 func try_move(move_vector: Vector2):
 	# test_move() checks if we hit a wall using CharacterBody2D
@@ -25,3 +27,17 @@ func animate_move(move_vector: Vector2):
 	
 	await tween.finished
 	moving = false
+	
+#Changes sprite to one facing in the correct direction
+func ChangeSprite(dir : Vector2):
+	var tex;
+	match dir:
+		Vector2.UP:
+			tex = load("res://Assets/MedusaSprites/MedusaSpriteUp.png")
+		Vector2.DOWN:
+			tex = load("res://Assets/MedusaSprites/MedusaSpriteDown.png")
+		Vector2.LEFT:
+			tex = load("res://Assets/MedusaSprites/MedusaSpriteLeft.png")
+		Vector2.RIGHT:
+			tex = load("res://Assets/MedusaSprites/MedusaSpriteRight.png")
+	$PlayerSprite.texture = tex
