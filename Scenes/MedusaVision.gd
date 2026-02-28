@@ -4,8 +4,6 @@ enum Direction {UP, DOWN, LEFT, RIGHT }
 
 var facingDirection : Direction
 
-# Called when the node enters the scene tree for the first time.
-
 @onready var ray: RayCast2D = $RayCast2D
 
 func _onTick():
@@ -15,15 +13,15 @@ func _onTick():
 func resolveDirection():
 	match facingDirection:
 		Direction.UP:
-			return Vector2(0, 1)
+			return Vector2.UP
 		Direction.DOWN:
-			return Vector2(0, -1)
+			return Vector2.DOWN
 		Direction.LEFT:
-			return Vector2(1, 0)
+			return Vector2.LEFT
 		Direction.RIGHT:
-			return Vector2(0, 1)
+			return Vector2.RIGHT
 		_:
-			return Vector2(0, 0)
+			return Vector2.ZERO
 		
 		
 		
@@ -39,7 +37,7 @@ func fire(facintDirection: Direction):
 	# Set ray length
 	ray.target_position = Vector2(max_distance, 0)
 	ray.force_raycast_update()
-
+	
 	if ray.is_colliding():
 		var collider = ray.get_collider()
 
