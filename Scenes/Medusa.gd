@@ -106,6 +106,8 @@ func fireRay():
 				hits_remaining -= 1
 			elif collider.is_in_group("Medusa"):
 				if is_facing_this_way:
+					var target = get_tree().current_scene.find_child("TickManager")
+					target.blocked = true
 					print("Died - Saw own reflection")
 					LevelFailed.emit()
 				break
