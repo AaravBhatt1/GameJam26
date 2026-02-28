@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://ckokupin1jhmt"]
+[gd_scene format=4 uid="uid://ckokupin1jhmt"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_fuudy"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_xylue"]
-[ext_resource type="Script" uid="uid://8hlktwadq2n" path="res://Scenes/TickManager.gd" id="3_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://w7i6g3pajsdn" path="res://Scenes/Person.tscn" id="4_ienac"]
+[ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_tj5wv"]
+[ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_ienac"]
+[ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="6_8c0lf"]
 
 [node name="Level2" type="Node2D"]
 
@@ -36,3 +38,10 @@ EnemyStatus = 1
 position = Vector2(72, -24)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 2
+
+[node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_0f350")]
+LevelToLoad = "res://Scenes/HardLevel.tscn"
+
+[node name="Mirror" parent="." unique_id=1877031682 instance=ExtResource("6_8c0lf")]
+position = Vector2(88, -24)
+metadata/_edit_group_ = true

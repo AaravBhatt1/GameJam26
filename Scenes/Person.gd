@@ -1,7 +1,8 @@
 class_name Enemy
 
 extends CharacterBody2D
-
+signal LevelWon
+signal LevelFailed
 @export var CurrentDirection = Vector2.DOWN
 enum EnemyState {Target, Civillian, Henchmen}
 @export var EnemyStatus : EnemyState
@@ -64,4 +65,10 @@ func ReplaceWithBox():
 	var box = box_scene.instantiate()
 	add_sibling(box)
 	box.global_position = self.global_position
+	if  EnemyStatus == EnemyState.Target:
+		LevelWon.emit()
+	elif EnemyStatus == EnemyState.Civillian:
+		LevelFailed.emit()
+
 	queue_free()
+	

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cx2kfq3ag31ho"]
+
+[ext_resource type="Script" uid="uid://bbx78dxf4pbdq" path="res://SceneManager.gd" id="1_yueht"]
+[ext_resource type="PackedScene" uid="uid://7swtchmkmjtc" path="res://Scenes/FadeIn.tscn" id="2_ebsso"]
+
+[node name="SceneManager" type="Node2D" unique_id=1117967804]
+script = ExtResource("1_yueht")
+
+[node name="Control" type="Control" parent="." unique_id=261223263]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FadeIn" parent="Control" unique_id=151081257 instance=ExtResource("2_ebsso")]
+custom_minimum_size = Vector2(0.035, 0)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="fadeFinished" from="Control/FadeIn" to="." method="_on_fade_in_fade_finished"]
