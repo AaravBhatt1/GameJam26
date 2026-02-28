@@ -1,8 +1,8 @@
-extends CharacterBody2D # Switched from Area2D
+extends CharacterBody2D
 
 
 @export var TILE_SIZE = 16
-@export var ANIMATION_SPEED = 4.0
+@export var ANIMATION_SPEED = 6.0
 @export var MAX_DISTANCE := 1000.0
 
 @onready var ray: RayCast2D = $RayCast2D
@@ -14,15 +14,16 @@ func _ready() -> void:
 	GameTick.tick.connect(_onTick)
 
 func _onTick(dir: Vector2) -> void:
-	fireRay(dir)
 	if dir != Vector2.ZERO:
-		try_move(dir * TILE_SIZE)
 		ChangeSprite(dir)
+		await try_move(dir * TILE_SIZE)
+		
+	fireRay(dir)
 
 func try_move(move_vector: Vector2):
 	# test_move() checks if we hit a wall using CharacterBody2D
 	if not test_move(global_transform, move_vector):
-		animate_move(move_vector)
+		await animate_move(move_vector)
 
 func animate_move(move_vector: Vector2):
 	moving = true
@@ -48,20 +49,17 @@ func ChangeSprite(dir : Vector2):
 	
 #Fires a ray and checks for collisions
 func fireRay(facingDirection: Vector2):
-	if facingDirection == Vector2.ZERO:
-		return
-		
-	# Rotate laser to face direction
-	ray.global_rotation = facingDirection.angle()
+	var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 	
- 
-
-	# Set ray length
-	ray.target_position = Vector2(MAX_DISTANCE, 0)
-	ray.force_raycast_update()
+	for dir in directions:
+		ray.target_position = dir * MAX_DISTANCE
+		ray.force_raycast_update()
 	
-	#Returns collider overlapped with
-	if ray.is_colliding():
-		var collider = ray.get_collider()
-
-		print("Hit:", collider)
+		#Checks if enemy has seen you
+		if ray.is_colliding():
+			var collider = ray.get_collider()
+			if collider.is_in_group("Enemy"):
+				if "CurrentDirection" in collider:
+					var PlayerLine = (global_position - collider.global_position).normalized()
+					if collider.CurrentDirection == PlayerLine:
+						print("Enemy turned to stone")

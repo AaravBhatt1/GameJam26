@@ -27,6 +27,10 @@ GameTick="*res://GameTick.gd"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+Enemy=""
+
 [input]
 
 MoveUp={
