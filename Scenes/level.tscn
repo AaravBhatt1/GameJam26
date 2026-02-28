@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Scenes/TickManager.gd" id="3_tj5wv"]
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_ienac"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="6_8c0lf"]
 
 [node name="Level2" type="Node2D" unique_id=323625987]
 scale = Vector2(5.2, 5.2)
@@ -40,3 +41,7 @@ EnemyStatus = 2
 
 [node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_0f350")]
 LevelToLoad = "res://Scenes/HardLevel.tscn"
+
+[node name="Mirror" parent="." unique_id=1877031682 instance=ExtResource("6_8c0lf")]
+position = Vector2(88, -24)
+metadata/_edit_group_ = true

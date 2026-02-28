@@ -22,3 +22,11 @@ func reflectray(playerLine:Vector2):
 				return Vector2.UP
 			return Vector2.DOWN
 	
+
+func _ready() -> void:
+	var tex;
+	if direction:
+		tex = load("res://Assets/MirrorSprites/MirrorTLBR.png")
+	else:
+		tex = load("res://Assets/MirrorSprites/MirrorBLTR.png")
+	$Sprite2D.texture = tex;

@@ -17,7 +17,7 @@ func _onTick(dir: Vector2) -> void:
 		ChangeSprite(dir)
 		try_move(dir * TILE_SIZE)
 	else:
-		fireRay(dir)
+		fireRay()
 
 func try_move(move_vector: Vector2):
 	
@@ -39,7 +39,7 @@ func animate_move(move_vector: Vector2):
 	tween.finished.connect(
 		func(): 
 			moving = false
-			fireRay(move_vector)
+			fireRay()
 	)
 	
 #Changes sprite to one facing in the correct direction
@@ -57,7 +57,7 @@ func ChangeSprite(dir : Vector2):
 	$PlayerSprite.texture = tex
 	
 #Fires a ray and checks for collisions
-func fireRay(facingDirection: Vector2):
+func fireRay():
 	var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
 	
 	for dir in directions:
