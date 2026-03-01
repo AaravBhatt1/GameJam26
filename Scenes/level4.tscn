@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://dphasb0sy3i3u"]
+[gd_scene load_steps=8 format=4 uid="uid://cdxktqka5t1cn"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_46vi4"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_ohik4"]
@@ -42,7 +42,7 @@ direction = false
 position = Vector2(120, -56)
 
 [node name="SceneManager" parent="." instance=ExtResource("6_egqhl")]
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 LevelToLoad = "res://Scenes/HellLevel.tscn"
 
 [node name="Henchmen3" parent="." instance=ExtResource("4_7u67b")]
