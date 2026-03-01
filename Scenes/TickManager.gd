@@ -18,8 +18,7 @@ func _process(_delta):
 	elif Input.is_action_pressed("MoveLeft"):  dir = Vector2i.LEFT
 	elif Input.is_action_pressed("MoveRight"): dir = Vector2i.RIGHT
 	elif Input.is_action_pressed("Wait"):      dir = Vector2i.ZERO
-	else:
-		return
+	else: return
 
 	timer.start(TICK_DURATION)
 	GameTick.tick.emit(dir)

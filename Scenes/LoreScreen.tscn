@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://diycehackgy38"]
+[gd_scene load_steps=0 format=3 uid="uid://diycehackgy38"]
 
 [ext_resource type="Script" uid="uid://d3qcoa41vjbih" path="res://Scenes/LoreScreen.gd" id="1_qm3yp"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="2_qm3yp"]
