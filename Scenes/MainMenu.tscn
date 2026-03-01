@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bowh0inis067x" path="res://Scenes/UIButtons/QuitButton.tscn" id="2_8saeu"]
 [ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_8um5k"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="3_8saeu"]
-[ext_resource type="PackedScene" path="res://Scenes/backgound.tscn" id="5_df05h"]
+[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="5_df05h"]
 [ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="7_xim88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xim88"]

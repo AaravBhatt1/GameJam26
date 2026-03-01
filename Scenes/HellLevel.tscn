@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c8j8oykf6wdft"]
+[gd_scene load_steps=7 format=4 uid="uid://c8j8oykf6wdft"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_1s6y6"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_5xav8"]
@@ -7,78 +7,78 @@
 [ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="5_wjh0p"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_6xhgd"]
 
-[node name="Level1" type="Node2D" unique_id=2048061363]
+[node name="Level1" type="Node2D"]
 scale = Vector2(5, 5)
 
-[node name="Camera" type="Camera2D" parent="." unique_id=851401765]
-position = Vector2(-37.399998, 18.8)
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-37.4, 18.8)
 zoom = Vector2(0.75, 0.75)
 
-[node name="Level" type="TileMapLayer" parent="." unique_id=1168998395]
+[node name="Level" type="TileMapLayer" parent="."]
 z_index = -1
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAEAAQAAwAEAAMAAAADAAQAAwADAAMAAAACAAQAAwABAAMAAAABAAQAAwAAAAAAAAAAAAQAAwAAAAAAAAD//wQAAwAAAAAAAAD+/wQAAwAAAAAAAAD9/wQAAwAAAAAAAAD8/wQAAwADAAEAAAD6/wQAAwAAAAAAAAD4/wQAAwABAAAAAAD9/wEAAwAAAAAAAAADAAEAAwADAAMAAAAEAAEAAwAEAAMAAAAFAAEAAwABAAAAAAD4/wAAAwABAAAAAAD4////AwABAAAAAAD9/wAAAwAAAAAAAAAAAP//AwAAAAMAAAD+////AwADAAEAAAD4//7/AwABAAAAAAAGAP7/AwABAAAAAAD4//z/AwABAAAAAAD4//3/AwABAAAAAAAGAP3/AwABAAAAAAAHAPz/AwAAAAAAAAAGAPz/AwABAAAAAAAFAPz/AwAAAAAAAAAEAPz/AwAEAAMAAAADAPz/AwACAAMAAAD+//v/AwADAAQAAAD9//v/AwACAAQAAAD8//v/AwABAAQAAAD4//v/AwABAAAAAAABAPz/AwABAAMAAAACAPz/AwACAAMAAAD5//v/AwABAAMAAAD5//z/AwABAAQAAAD5//3/AwAAAAAAAAD5/wMAAwAAAAAAAAD5/wIAAwAAAAAAAAD5/wEAAwAAAAAAAAD5/wAAAwAAAAMAAAD5////AwAAAAMAAAD5//7/AwADAAEAAAAIAAQAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAAAAQAAAAAAAAAIAP//AQAAAAAAAAAIAP7/AQAAAAAAAAAIAP3/AQAAAAAAAAAIAPz/AQAAAAAAAAAIAPv/AQAAAAAAAAD7//v/AwAEAAMAAAD6//v/AwACAAMAAAD6/wMAAwAAAAAAAAAAAPz/AwADAAEAAAD+//z/AwAAAAAAAAD9//z/AwAAAAMAAAD8//z/AwAAAAMAAAD7//z/AwAEAAQAAAD6//z/AwADAAQAAAD9//3/AwAAAAAAAAD9//7/AwAAAAMAAAD+//7/AwAAAAAAAAD+//3/AwAAAAAAAAAAAP7/AwAAAAAAAAAAAP3/AwAAAAAAAAD9////AwAAAAAAAAD6//3/AwAAAAAAAAD7//3/AwAAAAAAAAD8//3/AwAAAAAAAAD8//7/AwAAAAMAAAD7//7/AwAAAAAAAAD6//7/AwAAAAAAAAD6////AwAAAAMAAAD7////AwAAAAMAAAD8////AwAAAAAAAAD6/wAAAwAAAAAAAAD6/wEAAwAAAAAAAAD7/wEAAwAAAAAAAAD8/wEAAwAAAAAAAAD8/wIAAwAAAAAAAAD7/wIAAwADAAEAAAD6/wIAAwAAAAAAAAD9/wIAAwAAAAAAAAD+/wIAAwAAAAAAAAD+/wAAAwAAAAAAAAD+/wEAAwAAAAAAAAD3/wIAAwAAAAAAAAD3/wMAAwAEAAEAAAD5/wUAAwACAAEAAAD6/wUAAwAAAAAAAAD7/wUAAwAAAAAAAAAFAAUAAwABAAAAAAAGAAUAAwAAAAAAAAAJAAQAAQAAAAAAAAAJAAMAAQAAAAAAAAAFAPr/AQAAAAAAAAAGAPr/AQAAAAAAAAAIAPr/AQAAAAAAAAAIAPn/AQAAAAAAAAD5//r/AwAAAAAAAAD6//r/AwAAAAAAAAD7//r/AwAAAAAAAAD///v/AwACAAQAAAD///z/AwAAAAAAAAD///3/AwACAAEAAAD///7/AwADAAEAAAABAAAAAwAAAAMAAAD//wEAAwAAAAAAAAD//wAAAwAAAAAAAAD/////AwAAAAAAAAAAAAAAAwAAAAAAAAAAAAEAAwAAAAAAAAABAAEAAwAAAAAAAAACAAEAAwABAAMAAAAEAP3/AwAEAAMAAAAFAP3/AwAAAAMAAAAFAP7/AwAAAAAAAAAEAAAAAwAEAAMAAAAFAAAAAwAAAAEAAGAGAAEAAwAAAAAAAAAGAAAAAwAEAAAAAAAGAP//AwABAAAAAAAFAP//AwADAAEAAAAGAAIAAwAAAAAAAAAGAAMAAwAAAAAAAAADAP3/AwADAAMAAAAEAP//AwAEAAMAAAAEAP7/AwAEAAMAAAACAP3/AwACAAMAAAABAP3/AwABAAMAAAADAPv/AwACAAMAAAACAPv/AwACAAMAAAABAPv/AwAGAAIAAAAAAPv/AwADAAQAAAAEAPv/AwAEAAMAAAAFAPv/AwADAAAAAAAGAPv/AwAAAAEAAAAHAPv/AwAAAAAAAAAHAP3/AwAAAAAAAAAHAP7/AwAAAAAAAAAHAP//AwAAAAAAAAAHAAAAAwAAAAAAAAAHAAEAAwAAAAAAAAAHAAIAAwAAAAAAAAAHAAMAAwAAAAAAAAAFAAQAAwABAAAAAAADAP7/AwACAAMAAAADAP//AwACAAMAAAADAAAAAwADAAMAAAACAAAAAwABAAMAAAACAP//AwABAAMAAAABAP//AwAAAAMAAAABAP7/AwABAAQAAAACAP7/AwAGAAIAAAD9/wMAAwAAAAAAAAAAAAIAAwAAAAMAAAACAAMAAwABAAMAAAADAAIAAwADAAMAAAD+/wMAAwAAAAAAAAD//wMAAwAAAAAAAAAAAAMAAwAAAAAAAAABAAMAAwAAAAAAAAABAAIAAwAAAAAAAAACAAIAAwABAAMAAAAEAAIAAwAEAAMAAAAEAAMAAwAEAAMAAAAFAAMAAwABAAAAAAAFAAIAAwABAAAAAAADAAMAAwADAAMAAAD//wIAAwAAAAMAAAD8/wMAAwAAAAAAAAD7/wMAAwAAAAAAAAD8/wAAAwAAAAAAAAD7/wAAAwAAAAAAAAD7/wQAAwAAAAAAAAD4/wEAAwABAAAAAAD4/wIAAwABAAAAAAD4/wMAAwABAAAAAAD5/wQAAwAAAAAAAAD3/wEAAwAEAAEAAAD3/wAAAwAEAAEAAAD3////AwAAAAAAAAD3//7/AwAEAAEAAAAHAAQAAwAAAAAAAAAGAAQAAwACAAEAAAACAPr/AwACAAMAAAABAPr/AwACAAMAAAAAAPr/AwACAAMAAAD///r/AwACAAMAAAD+//r/AwACAAMAAAD8//r/AwABAAMAAAD9//r/AwACAAMAAAADAPr/AwACAAMAAAAEAPr/AwAEAAMAAAD3//v/AwAAAAAAAAD3//r/AwAAAAAAAAD4//r/AwABAAAAAAD3//z/AwAEAAEAAAD3//3/AwAEAAEAAAD4/wUAAwABAAAAAAD3/wUAAwADAAEAAAD3/wQAAwAAAAMAAAD8/wUAAwAAAAAAAAD9/wUAAwAAAAAAAAD+/wUAAwAAAAAAAAD//wUAAwAAAAAAAAAAAAUAAwADAAEAAAABAAUAAwAAAAAAAAACAAUAAwABAAQAAAADAAUAAwADAAQAAAAEAAUAAwAEAAQAAAAHAAUAAwAAAAAAAAAIAAUAAQAAAAAAAAD4/wYAAwABAAAAAAD4/wcAAwADAAAAAAACAAYAAwACAAIAAAABAAYAAwADAAIAAAAAAAYAAwADAAIAAAD//wYAAwACAAIAAAD+/wYAAwACAAIAAAD9/wYAAwADAAIAAAD8/wYAAwADAAIAAAD7/wYAAwADAAIAAAD6/wYAAwACAAIAAAD5/wYAAwABAAIAAAD5/wcAAwACAAAAAAD6/wcAAwACAAAAAAD7/wcAAwACAAAAAAD8/wcAAwACAAAAAAD9/wcAAwACAAAAAAD+/wcAAwACAAAAAAD//wcAAwACAAAAAAAAAAcAAwACAAAAAAABAAcAAwACAAAAAAACAAcAAwACAAAAAAD3/wcAAwAAAAAAAAD3/wYAAwAAAAAAAAAEAAYAAwADAAAAAFADAAYAAwAEAAIAAAAFAAYAAwAEAAAAAAAGAAYAAwAAAAAAAAD2//z/AwAAAAAAAAD1//z/AwAAAAAAAAD0//z/AwAEAAEAAAD0//v/AwAAAAAAAAD1//v/AwAAAAAAAAD2//v/AwAAAAAAAADz//v/AwAAAAAAAADz//z/AwAAAAAAAADy//z/AwAAAAAAAADy//3/AwAAAAAAAADz//3/AwAAAAAAAADz//7/AwAAAAAAAADz////AwAAAAAAAADz/wAAAwAAAAAAAADz/wEAAwAAAAAAAAD0/wEAAwAAAAAAAAD0/wIAAwAAAAAAAAD0/wMAAwAAAAAAAAD0/wQAAwAAAAAAAAD0/wUAAwAAAAAAAADz/wUAAwAAAAAAAADz/wQAAwAAAAAAAADz/wMAAwAAAAAAAADz/wIAAwAAAAAAAAD0//7/AwAAAAAAAAD0//3/AwAAAAAAAAD1//3/AwAAAAAAAAD1//7/AwAAAAAAAAD2//7/AwAAAAAAAAD2//3/AwAAAAAAAAD2////AwADAAEAAAD1////AwAAAAAAAAD1/wAAAwADAAEAAAD1/wEAAwAAAAAAAAD0////AwAAAAAAAAD0/wAAAwAAAAAAAAD1/wIAAwAAAAMAAAD2/wEAAwAAAAAAAAD1/wMAAwAAAAAAAAD1/wQAAwAAAAAAAAD2/wAAAwAAAAAAAAD2/wIAAwAAAAAAAAD2/wMAAwACAAEAAAD2/wQAAwAAAAAAAAD1/wUAAwAAAAAAAAD1/wYAAwAAAAAAAAD2/wUAAwAAAAAAAAD2/wYAAwAAAAAAAAD1/wcAAwAAAAAAAAD0/wcAAwAAAAAAAAD0/wYAAwAAAAAAAAA=")
 tile_set = ExtResource("1_1s6y6")
 
-[node name="Medusa" parent="." unique_id=570168608 instance=ExtResource("2_5xav8")]
+[node name="Medusa" parent="." instance=ExtResource("2_5xav8")]
 position = Vector2(-40, 24)
 
-[node name="TickManager" type="Node" parent="." unique_id=2028472585]
+[node name="TickManager" type="Node" parent="."]
 script = ExtResource("3_h8fbx")
 
-[node name="Timer" type="Timer" parent="TickManager" unique_id=874116991]
+[node name="Timer" type="Timer" parent="TickManager"]
 one_shot = true
 
-[node name="God" parent="." unique_id=2049862541 instance=ExtResource("4_42i1y")]
+[node name="God" parent="." instance=ExtResource("4_42i1y")]
 position = Vector2(-8, 56)
 up_direction = Vector2(0, 1)
 CurrentDirection = Vector2(1, 0)
 
-[node name="Henchmen" parent="." unique_id=529020214 instance=ExtResource("4_42i1y")]
+[node name="Henchmen" parent="." instance=ExtResource("4_42i1y")]
 position = Vector2(-88, -40)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 2
 
-[node name="Mirror" parent="." unique_id=274006040 instance=ExtResource("5_wjh0p")]
+[node name="Mirror" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-104, 40)
 direction = false
 
-[node name="Mirror2" parent="." unique_id=985133923 instance=ExtResource("5_wjh0p")]
+[node name="Mirror2" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(24, 24)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 
-[node name="Mirror3" parent="." unique_id=434103299 instance=ExtResource("5_wjh0p")]
+[node name="Mirror3" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(24, 88)
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(1, 1)
 direction = false
 backwards = true
 
-[node name="Mirror4" parent="." unique_id=67702432 instance=ExtResource("5_wjh0p")]
+[node name="Mirror4" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-104, 72)
-scale = Vector2(0.9999996, 0.9999996)
+scale = Vector2(1, 1)
 backwards = true
 
-[node name="Mirror5" parent="." unique_id=1515386012 instance=ExtResource("5_wjh0p")]
-position = Vector2(-23.999985, 72.00002)
-scale = Vector2(0.99999917, 0.99999917)
+[node name="Mirror5" parent="." instance=ExtResource("5_wjh0p")]
+position = Vector2(-24, 72)
+scale = Vector2(0.999999, 0.999999)
 direction = false
 backwards = true
 
-[node name="Mirror6" parent="." unique_id=1135003858 instance=ExtResource("5_wjh0p")]
+[node name="Mirror6" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 24)
-scale = Vector2(0.9999982, 0.9999982)
+scale = Vector2(0.999998, 0.999998)
 direction = false
 
-[node name="Mirror7" parent="." unique_id=751025457 instance=ExtResource("5_wjh0p")]
+[node name="Mirror7" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 88)
-scale = Vector2(0.9999963, 0.9999963)
+scale = Vector2(0.999996, 0.999996)
 backwards = true
 
-[node name="Mirror8" parent="." unique_id=61759174 instance=ExtResource("5_wjh0p")]
+[node name="Mirror8" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-24, 40)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 
-[node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_6xhgd")]
+[node name="SceneManager" parent="." instance=ExtResource("6_6xhgd")]
 position = Vector2(91.4, -36.8)
-scale = Vector2(0.9999998, 0.9999998)
+scale = Vector2(1, 1)
 LevelToLoad = "res://Scenes/MainMenu.tscn"

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://6hqmwbsaiu0i"]
+[gd_scene load_steps=52 format=3 uid="uid://6hqmwbsaiu0i"]
 
 [ext_resource type="Script" uid="uid://dge57fcsghveg" path="res://Scenes/Medusa.gd" id="1_od7hl"]
 [ext_resource type="Texture2D" uid="uid://c5t1affjyhvxy" path="res://Assets/Walk_cycle.png" id="2_a7hbm"]
@@ -330,49 +330,49 @@ height = 8
 fill = 1
 fill_from = Vector2(0.490654, 0.375876)
 
-[node name="Medusa" type="CharacterBody2D" unique_id=1061186616 groups=["Medusa"]]
+[node name="Medusa" type="CharacterBody2D" groups=["Medusa"]]
 z_index = 2
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_od7hl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1208214173]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ic1qj")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1418976014]
+[node name="RayCast2D" type="RayCast2D" parent="."]
 exclude_parent = false
 collide_with_areas = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1078987796]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xourp")
 animation = &"walk-left"
 
-[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1638140777]
+[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D"]
 z_index = -1
 position = Vector2(2, 16)
 scale = Vector2(1.92308, 1.25)
 texture = SubResource("GradientTexture2D_a7hbm")
 
-[node name="MedusaSoundEffects" type="Node" parent="." unique_id=1886904983]
+[node name="MedusaSoundEffects" type="Node" parent="."]
 
-[node name="GrassWalk1" type="AudioStreamPlayer" parent="MedusaSoundEffects" unique_id=2024101622]
+[node name="GrassWalk1" type="AudioStreamPlayer" parent="MedusaSoundEffects"]
 stream = ExtResource("3_hikbx")
 volume_db = -25.0
 
-[node name="GrassWalk2" type="AudioStreamPlayer" parent="MedusaSoundEffects" unique_id=924581487]
+[node name="GrassWalk2" type="AudioStreamPlayer" parent="MedusaSoundEffects"]
 stream = ExtResource("4_a7hbm")
 volume_db = -25.0
 
-[node name="GrassWalk3" type="AudioStreamPlayer" parent="MedusaSoundEffects" unique_id=709801995]
+[node name="GrassWalk3" type="AudioStreamPlayer" parent="MedusaSoundEffects"]
 stream = ExtResource("5_oh7do")
 volume_db = -25.0
 
-[node name="GrassWalk4" type="AudioStreamPlayer" parent="MedusaSoundEffects" unique_id=1369740114]
+[node name="GrassWalk4" type="AudioStreamPlayer" parent="MedusaSoundEffects"]
 stream = ExtResource("6_1osp3")
 volume_db = -25.0
 
-[node name="Line2D" type="Line2D" parent="." unique_id=632642121]
+[node name="Line2D" type="Line2D" parent="."]
 z_index = -1
 width = 3.0
-default_color = Color(1, 1, 0.7372549, 1)
+default_color = Color(1, 1, 0.737255, 1)
