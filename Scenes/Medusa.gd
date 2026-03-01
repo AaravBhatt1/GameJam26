@@ -152,7 +152,7 @@ func fireRay():
 func animateRay():
 	draw_progress = 0.0
 	var tween = create_tween()
-	tween.tween_property(self, "draw_progress", 1.0, 1.0).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(self, "draw_progress", 1.0, 0.2).set_trans(Tween.TRANS_LINEAR)
 
 func _process(_delta):
 	if draw_progress > 0 and not active_ray_path.is_empty():
