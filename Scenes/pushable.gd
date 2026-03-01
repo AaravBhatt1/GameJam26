@@ -1,7 +1,13 @@
 extends CharacterBody2D
 
 func _ready() -> void:
-	$AudioStreamPlayer2.play()
+	var screamNum= randf()
+	if screamNum <0.45:
+		$AudioStreamPlayer3.play()
+	elif screamNum <0.95:
+		$AudioStreamPlayer5.play()
+	else:
+		$AudioStreamPlayer4.play()
 
 func PlaySound():
 	$AudioStreamPlayer.play()
@@ -27,3 +33,15 @@ func animate_move(move_vec):
 	var target_pos = position + move_vec
 	var tween = create_tween()
 	tween.tween_property(self, "position", target_pos, 0.3).set_trans(Tween.TRANS_LINEAR)
+
+
+func _on_audio_stream_player_3_finished() -> void:
+	$AudioStreamPlayer2.play()
+
+
+func _on_audio_stream_player_4_finished() -> void:
+	$AudioStreamPlayer2.play()
+
+
+func _on_audio_stream_player_5_finished() -> void:
+	$AudioStreamPlayer2.play()
