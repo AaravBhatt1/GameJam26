@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cclestekih0th"]
+
+[ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="1_ajahj"]
+
+[resource]
+font = ExtResource("1_ajahj")
+font_size = 50
+shadow_size = 4

@@ -1,8 +1,15 @@
-[gd_scene format=3 uid="uid://bowh0inis067x"]
+[gd_scene load_steps=3 format=3 uid="uid://bowh0inis067x"]
 
 [ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_4f6k7"]
+[ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_5nyfo"]
 
-[node name="QuitButton" unique_id=1288137410 instance=ExtResource("1_4f6k7")]
+[node name="QuitButton" instance=ExtResource("1_4f6k7")]
+self_modulate = Color(1, 1, 1, 0)
 
-[node name="Label" parent="." index="0" unique_id=1070044622]
+[node name="Label" parent="." index="0"]
+offset_left = 81.0
+offset_top = 1.0
+offset_right = 247.0
+offset_bottom = 56.0
 text = "QUIT GAME"
+label_settings = ExtResource("2_5nyfo")

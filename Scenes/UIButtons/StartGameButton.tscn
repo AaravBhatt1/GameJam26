@@ -1,8 +1,17 @@
-[gd_scene format=3 uid="uid://ceyqtcqc1wmhf"]
+[gd_scene load_steps=3 format=3 uid="uid://ceyqtcqc1wmhf"]
 
 [ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_pc8b0"]
+[ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_avmif"]
 
-[node name="StartGameButton" unique_id=1288137410 instance=ExtResource("1_pc8b0")]
+[node name="StartGameButton" instance=ExtResource("1_pc8b0")]
+self_modulate = Color(1, 1, 1, 0)
 
-[node name="Label" parent="." index="0" unique_id=1070044622]
+[node name="Label" parent="." index="0"]
+offset_left = 79.0
+offset_top = 2.0
+offset_right = 269.0
+offset_bottom = 57.0
 text = "START GAME"
+label_settings = ExtResource("2_avmif")
+horizontal_alignment = 1
+vertical_alignment = 1
