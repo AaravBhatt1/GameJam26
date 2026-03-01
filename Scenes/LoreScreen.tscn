@@ -2,6 +2,125 @@
 
 [ext_resource type="Script" uid="uid://d3qcoa41vjbih" path="res://Scenes/LoreScreen.gd" id="1_qm3yp"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="2_qm3yp"]
+[ext_resource type="Texture2D" uid="uid://dfvvtqwk63c6u" path="res://Assets/BigMedusaBlink1.png" id="3_xqsi0"]
+[ext_resource type="Texture2D" uid="uid://e0p0s7xeh7hi" path="res://Assets/BigMedusaBlink2.png" id="4_5tp42"]
+[ext_resource type="Texture2D" uid="uid://r0ka82caemvr" path="res://Assets/BigMedusaBlink3.png" id="5_lpdvd"]
+[ext_resource type="Texture2D" uid="uid://cetafxwlr8s58" path="res://Assets/BigMedusaBlink4.png" id="6_1ukfp"]
+[ext_resource type="Texture2D" uid="uid://dwucs756o3nvk" path="res://Assets/BigMedusaBlink5.png" id="7_ox443"]
+[ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="8_p14md"]
+[ext_resource type="Script" uid="uid://b2t5irl8lemwe" path="res://Scenes/BlinkingAnim.gd" id="9_ceavl"]
+[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="10_5tp42"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tp42"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpdvd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvwb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xqsi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5tp42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lpdvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1ukfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ox443")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p14md")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Lore" type="Control" unique_id=1561397858]
 layout_mode = 3
@@ -19,17 +138,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1320705781]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=955331724]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Press Enter to continue"
+fit_content = true
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1100255844]
+layout_mode = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_right = 350
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1320705781]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=998992070]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=998992070]
 layout_mode = 2
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=333452876]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=333452876]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tp42")
+theme_override_styles/background = SubResource("StyleBoxFlat_lpdvd")
 bbcode_enabled = true
 text = "You were once 
 beautiful, fragrant, young.
@@ -60,6 +200,33 @@ For [b]he[/b] and his servants soon shall be [b]petrified[/b].
 "
 fit_content = true
 horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer" unique_id=2124816507]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tp42")
+theme_override_styles/background = SubResource("StyleBoxFlat_lpdvd")
+bbcode_enabled = true
+text = "Controls:
+WASD / Arrow Keys to Move
+R to Restart Level
+
+Slay his servants
+Spare the masses"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=542945706]
+position = Vector2(212.5, 363.55463)
+scale = Vector2(0.7339313, 0.73393095)
+sprite_frames = SubResource("SpriteFrames_mvwb3")
+script = ExtResource("9_ceavl")
+
+[node name="Backgound" parent="." unique_id=190793501 instance=ExtResource("10_5tp42")]
+z_index = -4096
+position = Vector2(-13, -13)
 
 [node name="FadeIn" parent="." unique_id=267792872 instance=ExtResource("2_qm3yp")]
 layout_mode = 0

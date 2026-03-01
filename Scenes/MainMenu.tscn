@@ -6,7 +6,13 @@
 [ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_8um5k"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="3_8saeu"]
 [ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="5_df05h"]
+[ext_resource type="Texture2D" uid="uid://dfvvtqwk63c6u" path="res://Assets/BigMedusaBlink1.png" id="6_rrcx7"]
+[ext_resource type="Texture2D" uid="uid://e0p0s7xeh7hi" path="res://Assets/BigMedusaBlink2.png" id="7_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="7_xim88"]
+[ext_resource type="Texture2D" uid="uid://r0ka82caemvr" path="res://Assets/BigMedusaBlink3.png" id="8_8e205"]
+[ext_resource type="Texture2D" uid="uid://cetafxwlr8s58" path="res://Assets/BigMedusaBlink4.png" id="9_7467j"]
+[ext_resource type="Texture2D" uid="uid://dwucs756o3nvk" path="res://Assets/BigMedusaBlink5.png" id="10_2x1g0"]
+[ext_resource type="Script" uid="uid://b2t5irl8lemwe" path="res://Scenes/BlinkingAnim.gd" id="12_fh7cp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xim88"]
 font = ExtResource("2_8um5k")
@@ -16,15 +22,106 @@ font_size = 120
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_rrcx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fh7cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8e205")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7467j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2x1g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}, {
+"duration": 1.0,
 "texture": ExtResource("7_xim88")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -82,6 +179,8 @@ z_index = -4096
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=188393748]
 position = Vector2(900, 400)
 sprite_frames = SubResource("SpriteFrames_koqhg")
+frame_progress = 0.45737067
+script = ExtResource("12_fh7cp")
 
 [node name="FadeIn" parent="." unique_id=172353803 instance=ExtResource("3_8saeu")]
 visible = false
