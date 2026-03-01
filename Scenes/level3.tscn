@@ -63,3 +63,4 @@ numGuards = 4
 
 [node name="SceneManager" parent="." unique_id=1157834223 instance=ExtResource("5_h3ll2")]
 LevelToLoad = "res://Scenes/level4.tscn"
+LevelSong = "res://Assets/SoundEffects/2nd music.wav"

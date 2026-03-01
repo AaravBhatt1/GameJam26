@@ -117,3 +117,4 @@ EnemyStatus = 1
 position = Vector2(91.399994, -36.8)
 scale = Vector2(0.99999994, 0.99999994)
 LevelToLoad = "res://Scenes/WinScreen.tscn"
+LevelSong = "res://Assets/res://Assets/SoundEffects/2nd music.wav/Main_theme.wav"

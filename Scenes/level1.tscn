@@ -44,3 +44,4 @@ EnemyStatus = 2
 [node name="SceneManager" parent="." unique_id=212760595 instance=ExtResource("5_y4dr7")]
 scale = Vector2(0.99999994, 0.99999994)
 LevelToLoad = "res://Scenes/level2.5.tscn"
+LevelSong = "res://Assets/SoundEffects/Main_theme_developed.wav"
