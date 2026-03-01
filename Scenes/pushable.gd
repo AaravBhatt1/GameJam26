@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-@export var sprite_texture
+@export var sprite_texture: Texture2D
+
+@onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	if sprite_texture:

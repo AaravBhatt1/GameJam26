@@ -112,9 +112,9 @@ func ReplaceWithBox():
 			var a
 			match CurrentDirection:
 				Vector2.UP:
-					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-front.png")
-				Vector2.DOWN:
 					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-back.png")
+				Vector2.DOWN:
+					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-front.png")
 				Vector2.LEFT:
 					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-left.png")
 				Vector2.RIGHT:
@@ -124,9 +124,9 @@ func ReplaceWithBox():
 			var a
 			match CurrentDirection:
 				Vector2.UP:
-					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-front.png")
-				Vector2.DOWN:
 					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-down.png")
+				Vector2.DOWN:
+					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-front.png")
 				Vector2.LEFT:
 					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-left.png")
 				Vector2.RIGHT:

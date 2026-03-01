@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://w7i6g3pajsdn"]
+[gd_scene load_steps=138 format=3 uid="uid://w7i6g3pajsdn"]
 
 [ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="1_m1htj"]
 [ext_resource type="Texture2D" uid="uid://c3x4mu8fna644" path="res://Assets/henchman.png" id="2_55i2x"]
@@ -885,19 +885,19 @@ height = 8
 fill = 1
 fill_from = Vector2(0.490654, 0.375876)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=523442531 groups=["Enemy"]]
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_mask = 3
 script = ExtResource("1_m1htj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=884650158]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7fd37")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=697733907]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_04mrr")
 animation = &"down-civ"
 
-[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1529698655]
+[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D"]
 z_index = -1
 position = Vector2(2, 16)
 scale = Vector2(1.92308, 1.25)
