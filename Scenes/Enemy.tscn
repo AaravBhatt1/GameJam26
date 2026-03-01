@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=3 uid="uid://72rlqcnq2xhd"]
+[gd_scene format=3 uid="uid://72rlqcnq2xhd"]
 
 [ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="1_wovta"]
 [ext_resource type="Texture2D" uid="uid://c3x4mu8fna644" path="res://Assets/henchman.png" id="2_wovta"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://btlhn7h74orj0" path="res://Assets/henchmanToStone/grayscale_080.png" id="20_bly65"]
 [ext_resource type="Texture2D" uid="uid://cb68w0bffyje2" path="res://Assets/henchmanToStone/grayscale_090.png" id="21_cjbcs"]
 [ext_resource type="Texture2D" uid="uid://cbphairtkgj3w" path="res://Assets/henchmanToStone/grayscale_100.png" id="22_26boc"]
+[ext_resource type="Texture2D" uid="uid://fjdptsiqemb1" path="res://Assets/Henchman_idle.png" id="25_hfgpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5sdbb"]
 size = Vector2(14, 14)
@@ -136,6 +137,14 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("2_wovta")
 region = Rect2(64, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xju7k"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8a7u"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(64, 32, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1exfc"]
 atlas = ExtResource("2_xeo28")
 region = Rect2(0, 0, 32, 32)
@@ -244,6 +253,14 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("2_wovta")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfgpu"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tivof"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(0, 32, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_mo1ky"]
 atlas = ExtResource("2_xeo28")
 region = Rect2(96, 0, 32, 32)
@@ -351,6 +368,14 @@ region = Rect2(96, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_geb0g"]
 atlas = ExtResource("2_wovta")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysecm"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bly65"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6bs3c"]
 atlas = ExtResource("2_xeo28")
@@ -464,6 +489,14 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("2_wovta")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjbcs"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26boc"]
+atlas = ExtResource("25_hfgpu")
+region = Rect2(32, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hfgpu"]
 animations = [{
 "frames": [{
@@ -562,6 +595,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wb8pt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xju7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8a7u")
 }],
 "loop": true,
 "name": &"down-hench",
@@ -663,6 +702,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_04mrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfgpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tivof")
 }],
 "loop": true,
 "name": &"left-hench",
@@ -764,6 +809,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_geb0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysecm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bly65")
 }],
 "loop": true,
 "name": &"right-hench",
@@ -868,6 +919,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0ccgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjbcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26boc")
 }],
 "loop": true,
 "name": &"up-hench",
@@ -885,18 +942,18 @@ height = 8
 fill = 1
 fill_from = Vector2(0.490654, 0.375876)
 
-[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
+[node name="Enemy" type="CharacterBody2D" unique_id=503619187 groups=["Enemy"]]
 script = ExtResource("1_wovta")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=257586422]
 shape = SubResource("RectangleShape2D_5sdbb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=375585040]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_hfgpu")
-animation = &"down-civ"
+animation = &"up-hench"
 
-[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D"]
+[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D" unique_id=1224422053]
 z_index = -1
 position = Vector2(2, 16)
 scale = Vector2(1.92308, 1.25)
