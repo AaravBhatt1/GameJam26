@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx2kfq3ag31ho"]
+[gd_scene format=3 uid="uid://cx2kfq3ag31ho"]
 
 [ext_resource type="Script" uid="uid://bbx78dxf4pbdq" path="res://SceneManager.gd" id="1_yueht"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="2_ebsso"]
 [ext_resource type="AudioStream" uid="uid://cralhku7wmawe" path="res://Assets/SoundEffects/Game over.wav" id="3_hjya1"]
 [ext_resource type="AudioStream" uid="uid://b87xxoq8xgu3p" path="res://Assets/SoundEffects/Victory.wav" id="4_7xrkh"]
 
-[node name="SceneManager" type="Node2D"]
+[node name="SceneManager" type="Node2D" unique_id=1270736795]
 script = ExtResource("1_yueht")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=561968929]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="FadeIn" parent="Control" instance=ExtResource("2_ebsso")]
+[node name="FadeIn" parent="Control" unique_id=1200155342 instance=ExtResource("2_ebsso")]
 custom_minimum_size = Vector2(0.035, 0)
 layout_mode = 0
 anchors_preset = 0
@@ -29,13 +29,13 @@ offset_bottom = 324.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2086711966]
 stream = ExtResource("3_hjya1")
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1036551119]
 stream = ExtResource("4_7xrkh")
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=664989360]
 autoplay = true
 
 [connection signal="fadeFinished" from="Control/FadeIn" to="." method="_on_fade_in_fade_finished"]
