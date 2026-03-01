@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhnkspdg0f10h"]
+[gd_scene load_steps=10 format=3 uid="uid://bhnkspdg0f10h"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
@@ -6,10 +6,27 @@
 [ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_8um5k"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="3_8saeu"]
 [ext_resource type="PackedScene" path="res://Scenes/backgound.tscn" id="5_df05h"]
+[ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="7_xim88"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xim88"]
 font = ExtResource("2_8um5k")
 font_size = 120
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_koqhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xim88")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -71,5 +88,9 @@ grow_vertical = 1
 
 [node name="Backgound" parent="." instance=ExtResource("5_df05h")]
 z_index = -4096
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(900, 400)
+sprite_frames = SubResource("SpriteFrames_koqhg")
 
 [connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]

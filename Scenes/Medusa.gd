@@ -50,7 +50,14 @@ func try_move(move_vector: Vector2):
 
 func animate_move(move_vector: Vector2):
 	moving = true
-	$AnimatedSprite2D.play("walk-sideways")
+	if move_vector == Vector2(16, 0):
+		$AnimatedSprite2D.play("walk-right")
+	if move_vector == Vector2(-16, 0):
+		$AnimatedSprite2D.play("walk-left")
+	if move_vector == Vector2(0, -16):
+		$AnimatedSprite2D.play("walk-up")
+	if move_vector == Vector2(0, 16):
+		$AnimatedSprite2D.play("walk-down")
 	var tween = create_tween()
 	tween.tween_property(self, "position", position + move_vector, 0.3).set_trans(Tween.TRANS_LINEAR)
 	tween.finished.connect(
@@ -70,9 +77,7 @@ func ChangeSprite(dir : Vector2):
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteDown.png")
 		Vector2.LEFT:
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteLeft.png")
-			$AnimatedSprite2D.flip_h = true
 		Vector2.RIGHT:
-			$AnimatedSprite2D.flip_h = false
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteRight.png")
 	#$PlayerSprite.texture = tex
 	return
