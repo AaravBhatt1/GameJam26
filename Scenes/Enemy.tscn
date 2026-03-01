@@ -1,17 +1,135 @@
-[gd_scene format=3 uid="uid://72rlqcnq2xhd"]
+[gd_scene load_steps=16 format=3 uid="uid://72rlqcnq2xhd"]
 
 [ext_resource type="Script" uid="uid://driql16psc71d" path="res://Scenes/Person.gd" id="1_wovta"]
-[ext_resource type="Texture2D" uid="uid://bs5qhxv7vd5vt" path="res://Assets/EnemySprites/EnemySpriteRight.png" id="2_wovta"]
+[ext_resource type="Texture2D" uid="uid://c3x4mu8fna644" path="res://Assets/henchman.png" id="2_wovta"]
+[ext_resource type="Texture2D" uid="uid://dcl2atsrh6sfa" path="res://Assets/Civilian.png" id="2_xeo28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fd37"]
 size = Vector2(14, 14)
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1635802173 groups=["Enemy"]]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpr8r"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wb8pt"]
+atlas = ExtResource("2_wovta")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1exfc"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04mrr"]
+atlas = ExtResource("2_wovta")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo1ky"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_geb0g"]
+atlas = ExtResource("2_wovta")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bs3c"]
+atlas = ExtResource("2_xeo28")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ccgy"]
+atlas = ExtResource("2_wovta")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xeo28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpr8r")
+}],
+"loop": true,
+"name": &"down-civ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wb8pt")
+}],
+"loop": true,
+"name": &"down-hench",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1exfc")
+}],
+"loop": true,
+"name": &"left-civ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04mrr")
+}],
+"loop": true,
+"name": &"left-hench",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo1ky")
+}],
+"loop": true,
+"name": &"right-civ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_geb0g")
+}],
+"loop": true,
+"name": &"right-hench",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bs3c")
+}],
+"loop": true,
+"name": &"up-civ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ccgy")
+}],
+"loop": true,
+"name": &"up-hench",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_xeo28"]
+offsets = PackedFloat32Array(0.163333, 1)
+colors = PackedColorArray(0, 0, 0, 0.462745, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kpr8r"]
+gradient = SubResource("Gradient_xeo28")
+width = 13
+height = 8
+fill = 1
+fill_from = Vector2(0.490654, 0.375876)
+
+[node name="Enemy" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_wovta")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1042695339]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_wovta")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=860200470]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7fd37")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_xeo28")
+animation = &"up-civ"
+
+[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D"]
+z_index = -1
+position = Vector2(2, 16)
+scale = Vector2(1.92308, 1.25)
+texture = SubResource("GradientTexture2D_kpr8r")

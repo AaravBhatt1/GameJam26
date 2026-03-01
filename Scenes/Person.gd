@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var CurrentDirection = Vector2.DOWN
 enum EnemyState {Target, Civillian, Henchmen}
 @export var EnemyStatus : EnemyState
+@onready var sprite = $AnimatedSprite2D
 
 signal LevelWon
 signal LevelFailed
@@ -13,41 +14,46 @@ func _ready():
 
 
 func SetSprite():
-	var tex;
+	#var tex;
 	match CurrentDirection:
 		Vector2.UP:
 			match EnemyStatus:
 				EnemyState.Target:
-					tex = load("res://Assets/EnemySprites/TargetSpriteUp.png")
+					sprite.play("up-civ")
+					#tex = load("res://Assets/EnemySprites/TargetSpriteUp.png")
 				EnemyState.Henchmen:
-					tex = load("res://Assets/EnemySprites/EnemySpriteUp.png")
-				_:
-					tex = load("res://Assets/EnemySprites/CivillianSpriteUp.png")
+					sprite.play("up-hench")
+					
+					#tex = load("res://Assets/EnemySprites/EnemySpriteUp.png")
+				_: sprite.play("up-civ")
+					#tex = load("res://Assets/EnemySprites/CivillianSpriteUp.png")
 		Vector2.DOWN:
 			match EnemyStatus:
-				EnemyState.Target:
-					tex = load("res://Assets/EnemySprites/TargetSpriteDown.png")
-				EnemyState.Henchmen:
-					tex = load("res://Assets/EnemySprites/EnemySpriteDown.png")
-				_:
-					tex = load("res://Assets/EnemySprites/CivillianSpriteDown.png")
+				EnemyState.Target: sprite.play("down-civ")
+					#tex = load("res://Assets/EnemySprites/TargetSpriteDown.png")
+				EnemyState.Henchmen: sprite.play("down-hench")
+					#tex = load("res://Assets/EnemySprites/EnemySpriteDown.png")
+				_: sprite.play("down-civ")
+					#tex = load("res://Assets/EnemySprites/CivillianSpriteDown.png")
 		Vector2.LEFT:
 			match EnemyStatus:
-				EnemyState.Target:
-					tex = load("res://Assets/EnemySprites/TargetSpriteLeft.png")
-				EnemyState.Henchmen:
-					tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
-				_:
-					tex = load("res://Assets/EnemySprites/CivillianSpriteLeft.png")
-		Vector2.RIGHT, _:
+				EnemyState.Target: pass
+					#tex = load("res://Assets/EnemySprites/TargetSpriteLeft.png")
+				EnemyState.Henchmen: 
+					sprite.play("left-hench")
+					#tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
+				_: sprite.play("left-civ")
+					#tex = load("res://Assets/EnemySprites/CivillianSpriteLeft.png")
+		Vector2.RIGHT:
 			match EnemyStatus:
-				EnemyState.Target:
-					tex = load("res://Assets/EnemySprites/TargetSpriteRight.png")
+				EnemyState.Target: pass
+					#tex = load("res://Assets/EnemySprites/TargetSpriteRight.png")
 				EnemyState.Henchmen:
-					tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
-				_:
-					tex = load("res://Assets/EnemySprites/CivillianSpriteRight.png")
-	$Sprite2D.texture = tex
+					sprite.play("right-hench")
+					#tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
+				_: sprite.play("right-civ")
+					#tex = load("res://Assets/EnemySprites/CivillianSpriteRight.png")
+	#$Sprite2D.texture = tex
 	
 func checkStatus():
 	return EnemyStatus != EnemyState.Henchmen
