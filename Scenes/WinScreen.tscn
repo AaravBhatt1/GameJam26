@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://dj6t0qjwsutpf"]
+
+[ext_resource type="Script" uid="uid://d3qcoa41vjbih" path="res://Scenes/LoreScreen.gd" id="1_c6q05"]
+[ext_resource type="Texture2D" uid="uid://dfvvtqwk63c6u" path="res://Assets/BigMedusaBlink1.png" id="2_77plb"]
+[ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_yqulb"]
+[ext_resource type="Texture2D" uid="uid://e0p0s7xeh7hi" path="res://Assets/BigMedusaBlink2.png" id="3_yqulb"]
+[ext_resource type="Texture2D" uid="uid://r0ka82caemvr" path="res://Assets/BigMedusaBlink3.png" id="4_br8cr"]
+[ext_resource type="Texture2D" uid="uid://cetafxwlr8s58" path="res://Assets/BigMedusaBlink4.png" id="5_3gwxl"]
+[ext_resource type="Texture2D" uid="uid://dwucs756o3nvk" path="res://Assets/BigMedusaBlink5.png" id="6_r0kpl"]
+[ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="7_phanr"]
+[ext_resource type="Script" uid="uid://b2t5irl8lemwe" path="res://Scenes/BlinkingAnim.gd" id="8_d17rv"]
+[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="9_0imix"]
+[ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="10_jhli6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tp42"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpdvd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvwb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_77plb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yqulb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_br8cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3gwxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r0kpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_phanr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Lore" type="Control" unique_id=1561397858]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c6q05")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1717766046]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=955331724]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Press Enter to continue"
+fit_content = true
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1100255844]
+layout_mode = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_right = 350
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1320705781]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=204130745]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_yqulb")
+theme_override_font_sizes/normal_font_size = 84
+text = "Congratulations!"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=998992070]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=333452876]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tp42")
+theme_override_styles/background = SubResource("StyleBoxFlat_lpdvd")
+bbcode_enabled = true
+text = "You were once 
+beautiful, fragrant, young.
+With auburn hair
+aaaa
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=542945706]
+position = Vector2(212.5, 363.55463)
+scale = Vector2(0.7339313, 0.73393095)
+sprite_frames = SubResource("SpriteFrames_mvwb3")
+script = ExtResource("8_d17rv")
+
+[node name="Backgound" parent="." unique_id=190793501 instance=ExtResource("9_0imix")]
+z_index = -4096
+position = Vector2(-13, -13)
+
+[node name="FadeIn" parent="." unique_id=267792872 instance=ExtResource("10_jhli6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="fadeIn" from="." to="FadeIn" method="_on_lore_fade_in"]
+[connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]
