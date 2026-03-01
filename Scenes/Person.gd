@@ -48,6 +48,9 @@ func SetSprite():
 					tex = load("res://Assets/EnemySprites/CivillianSpriteRight.png")
 	$Sprite2D.texture = tex
 	
+func checkStatus():
+	return EnemyStatus != EnemyState.Henchmen
+	
 func turnedStone():
 	match EnemyStatus:
 		EnemyState.Target:

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dphasb0sy3i3u"]
+[gd_scene format=4 uid="uid://b3yghbtvk7ild"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_46vi4"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_ohik4"]
@@ -7,62 +7,62 @@
 [ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="5_21ycj"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_egqhl"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" unique_id=1626694550]
 scale = Vector2(4.3, 4.3)
 
-[node name="Henchmen2" parent="." instance=ExtResource("4_7u67b")]
+[node name="Henchmen2" parent="." unique_id=1273986993 instance=ExtResource("4_7u67b")]
 position = Vector2(-8, 24)
 scale = Vector2(0.99999994, 0.99999994)
 up_direction = Vector2(-1, 0)
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 2
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=526565202]
 
-[node name="Level" type="TileMapLayer" parent="."]
+[node name="Level" type="TileMapLayer" parent="." unique_id=551057198]
 z_index = -1
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAEAAQAAwABAAMAAAADAAQAAwABAAAAAAACAAQAAwAEAAIAAAABAAQAAwADAAIAAAAAAAQAAwACAAIAAAD//wQAAwACAAIAAAD+/wQAAwACAAIAAAD9/wQAAwACAAIAAAD8/wQAAwACAAIAAAD6/wQAAwACAAIAAAD4/wQAAwAFAAMAAAD9/wEAAwAEAAQAAAADAAEAAwABAAAAAAAEAAEAAwABAAMAAAAFAAEAAwACAAMAAAD4/wAAAwAEAAMAAAD4////AwAEAAMAAAD9/wAAAwAEAAIAAAAAAP//AwAAAAAAAAD+////AwAAAAAAAAD4//7/AwAEAAIAAAAGAP7/AwAEAAEAAAD4//z/AwAEAAIAAAD4//3/AwAEAAIAAAAGAP3/AwAEAAEAAAAHAPz/AwAAAAAAAAAGAPz/AwAEAAEAAAAFAPz/AwAAAAAAAAAEAPz/AwAAAAAAAAADAPz/AwAAAAAAAAD+//v/AwAEAAQAAAD9//v/AwACAAQAAAD8//v/AwACAAQAAAD4//v/AwAFAAIAAAABAPz/AwAAAAAAAAACAPz/AwAAAAAAAAD5//v/AwADAAQAAAD5//z/AwAAAAAAAAD5//3/AwAAAAAAAAD5/wMAAwAAAAAAAAD5/wIAAwAAAAAAAAD5/wEAAwAAAAAAAAD5/wAAAwAAAAAAAAD5////AwAAAAAAAAD5//7/AwAAAAAAAAAIAAQAAwACAAMAAAAIAAMAAwAGAAMAAAAIAAIAAwABAAMAAAAIAAEAAwABAAMAAAAIAAAAAwABAAMAAAAIAP//AwABAAMAAAAIAP7/AwACAAMAAAAIAP3/AwACAAMAAAAIAPz/AwACAAMAAAAIAPv/AwABAAMAAAD7//v/AwACAAQAAAD6//v/AwADAAQAAAD6/wMAAwAAAAAAAAAAAPz/AwAAAAAAAAD+//z/AwAAAAAAAAD9//z/AwAAAAAAAAD8//z/AwACAAEAAAD7//z/AwAAAAAAAAD6//z/AwAAAAAAAAD9//3/AwAAAAAAAAD9//7/AwAAAAAAAAD+//7/AwAAAAAAAAD+//3/AwAAAAAAAAAAAP7/AwAAAAAAAAAAAP3/AwAAAAAAAAD9////AwAAAAAAAAD6//3/AwABAAIAAAD7//3/AwADAAIAAAD8//3/AwAEAAIAAAD8//7/AwAEAAQAAAD7//7/AwADAAQAAAD6//7/AwABAAQAAAD6////AwAAAAAAAAD7////AwAAAAAAAAD8////AwACAAEAAAD6/wAAAwAAAAAAAAD6/wEAAwAAAAAAAAD7/wEAAwABAAQAAAD8/wEAAwADAAQAAAD8/wIAAwAAAAAAAAD7/wIAAwAAAAAAAAD6/wIAAwAAAAAAAAD9/wIAAwAAAAAAAAD+/wIAAwAAAAAAAAD+/wAAAwAAAAAAAAD+/wEAAwAAAAAAAAD3/wIAAQAAAAAAAAD3/wMAAQABAAAAAAD5/wUAAQAAAAAAAAD6/wUAAQAAAAAAAAD7/wUAAQAAAAAAAAAFAAUAAwACAAMAAAAGAAUAAwACAAMAAAAJAAQAAwACAAMAAAAJAAMAAwACAAMAAAAFAPr/AQAAAAAAAAAGAPr/AQAAAAAAAAAIAPr/AQAAAAAAAAAIAPn/AQAAAAAAAAD5//r/AQAAAAAAAAD6//r/AQAAAAAAAAD7//r/AQAAAAAAAAD///v/AwABAAAAAAD///z/AwABAAAAAAD///3/AwABAAAAAAD///7/AwABAAAAAAABAAAAAwACAAAAAAD//wEAAwAAAAAAAAD//wAAAwADAAAAAAD/////AwABAAAAAAAAAAAAAwACAAAAAAAAAAEAAwAAAAAAAAABAAEAAwAAAAAAAAACAAEAAwAAAAAAAAAEAP3/AwAAAAAAAAAFAP3/AwAAAAAAAAAFAP7/AwAAAAAAAAAEAAAAAwABAAIAAAAFAAAAAwADAAIAAAAGAAEAAwAEAAMAAAAGAAAAAwAEAAIAAAAGAP//AwAAAAAAAAAFAP//AwAAAAAAAAAGAAIAAwAEAAMAAAAGAAMAAwAFAAMAAAADAP3/AwAAAAAAAAAEAP//AwAAAAAAAAAEAP7/AwAAAAAAAAACAP3/AwAAAAAAAAABAP3/AwAAAAAAAAADAPv/AwAAAAAAAAACAPv/AwAAAAAAAAABAPv/AwAAAAAAAAAAAPv/AwAAAAAAAAAEAPv/AwAAAAAAAAAFAPv/AwAAAAAAAAAGAPv/AwAEAAEAAAAHAPv/AwAAAAAAAAAHAP3/AwAAAAAAAAAHAP7/AwAAAAAAAAAHAP//AwAAAAAAAAAHAAAAAwAAAAAAAAAHAAEAAwAAAAAAAAAHAAIAAwAAAAAAAAAHAAMAAwAGAAMAAAAFAAQAAwACAAMAAAADAP7/AwAAAAAAAAADAP//AwAAAAAAAAADAAAAAwAAAAEAAAACAAAAAwACAAAAAAACAP//AwAEAAEAAAABAP//AwAAAAAAAAABAP7/AwAAAAAAAAACAP7/AwAAAAAAAAD9/wMAAwAAAAAAAAAAAAIAAwAAAAAAAAACAAMAAwAAAAAAAAADAAIAAwABAAAAAAD+/wMAAwAAAAAAAAD//wMAAwAAAAAAAAAAAAMAAwAAAAAAAAABAAMAAwAAAAAAAAABAAIAAwAAAAAAAAACAAIAAwAAAAAAAAAEAAIAAwABAAMAAAAEAAMAAwABAAMAAAAFAAMAAwADAAMAAAAFAAIAAwACAAMAAAADAAMAAwABAAAAAAD//wIAAwAAAAAAAAD8/wMAAwAAAAAAAAD7/wMAAwAAAAAAAAD8/wAAAwADAAIAAAD7/wAAAwABAAIAAAD7/wQAAwACAAIAAAD4/wEAAwAEAAMAAAD4/wIAAwAEAAMAAAD4/wMAAwAEAAMAAAD5/wQAAwACAAIAAAAGAAQAAwADAAMAAAAHAAQAAwACAAMAAAA=")
 tile_set = ExtResource("1_46vi4")
 
-[node name="Medusa" parent="." instance=ExtResource("2_ohik4")]
+[node name="Medusa" parent="." unique_id=161504993 instance=ExtResource("2_ohik4")]
 position = Vector2(-40, -40)
 
-[node name="TickManager" type="Node" parent="."]
+[node name="TickManager" type="Node" parent="." unique_id=622108480]
 script = ExtResource("3_adi6q")
 
-[node name="Timer" type="Timer" parent="TickManager"]
+[node name="Timer" type="Timer" parent="TickManager" unique_id=1217236138]
 one_shot = true
 
-[node name="Mirror" parent="." instance=ExtResource("5_21ycj")]
+[node name="Mirror" parent="." unique_id=688744849 instance=ExtResource("5_21ycj")]
 position = Vector2(8, -56)
 direction = false
 
-[node name="Mirror2" parent="." instance=ExtResource("5_21ycj")]
+[node name="Mirror2" parent="." unique_id=131149436 instance=ExtResource("5_21ycj")]
 position = Vector2(120, -56)
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="SceneManager" parent="." instance=ExtResource("6_egqhl")]
+[node name="SceneManager" parent="." unique_id=1368416961 instance=ExtResource("6_egqhl")]
 scale = Vector2(0.99999994, 0.99999994)
 LevelToLoad = "res://Scenes/level.tscn"
 
-[node name="Henchmen3" parent="." instance=ExtResource("4_7u67b")]
+[node name="Henchmen3" parent="." unique_id=354618475 instance=ExtResource("4_7u67b")]
 position = Vector2(8, 24)
 scale = Vector2(0.99999976, 0.99999976)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 2
 
-[node name="Civilian" parent="." instance=ExtResource("4_7u67b")]
+[node name="Civilian" parent="." unique_id=2031202511 instance=ExtResource("4_7u67b")]
 position = Vector2(40, -24)
 scale = Vector2(0.99999994, 0.99999994)
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 1
 
-[node name="God" parent="." instance=ExtResource("4_7u67b")]
+[node name="God" parent="." unique_id=2091370642 instance=ExtResource("4_7u67b")]
 position = Vector2(120, 40)
 up_direction = Vector2(0, 1)
 CurrentDirection = Vector2(0, -1)
 
-[node name="Henchmen" parent="." instance=ExtResource("4_7u67b")]
+[node name="Henchmen" parent="." unique_id=2127751729 instance=ExtResource("4_7u67b")]
 position = Vector2(-24, 24)
 EnemyStatus = 2
