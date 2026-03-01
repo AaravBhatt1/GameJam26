@@ -79,5 +79,6 @@ position = Vector2(-24, 40)
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="SceneManager" parent="." unique_id=1117967804 instance=ExtResource("6_6xhgd")]
+position = Vector2(91.4, -36.8)
 scale = Vector2(0.9999998, 0.9999998)
 LevelToLoad = "res://Scenes/MainMenu.tscn"
