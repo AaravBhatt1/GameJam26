@@ -78,7 +78,7 @@ position = Vector2(-24, 40)
 
 [node name="SceneManager" parent="." unique_id=194133710 instance=ExtResource("6_6xhgd")]
 position = Vector2(91.4, -36.8)
-LevelToLoad = "res://Scenes/MainMenu.tscn"
+LevelToLoad = "res://Scenes/WinScreen.tscn"
 
 [node name="WinManager" type="Node" parent="." unique_id=1505274492]
 script = ExtResource("7_5xav8")
