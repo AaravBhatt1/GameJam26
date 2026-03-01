@@ -49,6 +49,7 @@ func try_move(move_vector: Vector2):
 				return true
 
 func animate_move(move_vector: Vector2):
+	hideRay()
 	moving = true
 	if move_vector == Vector2(16, 0):
 		$AnimatedSprite2D.play("walk-right")
@@ -81,11 +82,14 @@ func ChangeSprite(dir : Vector2):
 			tex = load("res://Assets/MedusaSprites/MedusaSpriteRight.png")
 	#$PlayerSprite.texture = tex
 	return
-
+func hideRay():
+	draw_progress = 0.0
+	active_ray_path.clear()
+	line_2d.clear_points()
+	
 func fireRay():
 	var directions = [Vector2.UP, Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT]
-	line_2d.clear_points() 
-	
+
 	for start_dir in directions:
 		var current_dir = start_dir
 		var current_origin = global_position 
@@ -116,12 +120,14 @@ func fireRay():
 						if collider.CurrentDirection.is_equal_approx(-current_dir):
 							if collider.has_method("turnedStone"):
 								collider.turnedStone()
-							should_draw_this_ray = true
+								should_draw_this_ray = true
 					
 					# Alternative check if status is false but direction matches
 					elif collider.CurrentDirection.is_equal_approx(-current_dir):
 						if collider.has_method("turnedStone"):
 							collider.turnedStone()
+							should_draw_this_ray = true
+
 				break 
 
 			elif collider.is_in_group("Mirror"):
@@ -152,7 +158,7 @@ func fireRay():
 func animateRay():
 	draw_progress = 0.0
 	var tween = create_tween()
-	tween.tween_property(self, "draw_progress", 1.0, 1.0).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(self, "draw_progress", 1.0, 0.2).set_trans(Tween.TRANS_LINEAR)
 
 func _process(_delta):
 	if draw_progress > 0 and not active_ray_path.is_empty():

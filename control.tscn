@@ -1,8 +1,126 @@
-[gd_scene load_steps=2 format=3 uid="uid://1arb8j1iuspr"]
+[gd_scene format=3 uid="uid://1arb8j1iuspr"]
 
 [ext_resource type="Script" uid="uid://cjkq8msnvuptk" path="res://settingScreen.gd" id="1_0fbet"]
+[ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_62e2m"]
+[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="3_0ytqx"]
+[ext_resource type="PackedScene" uid="uid://b08yu7e3vxjfd" path="res://Scenes/UIButtons/ReturnToMenuButton.tscn" id="3_pxugv"]
+[ext_resource type="Texture2D" uid="uid://dfvvtqwk63c6u" path="res://Assets/BigMedusaBlink1.png" id="4_pxugv"]
+[ext_resource type="Texture2D" uid="uid://e0p0s7xeh7hi" path="res://Assets/BigMedusaBlink2.png" id="5_eh0v1"]
+[ext_resource type="Texture2D" uid="uid://r0ka82caemvr" path="res://Assets/BigMedusaBlink3.png" id="6_am1vj"]
+[ext_resource type="Texture2D" uid="uid://cetafxwlr8s58" path="res://Assets/BigMedusaBlink4.png" id="7_g31lc"]
+[ext_resource type="Texture2D" uid="uid://dwucs756o3nvk" path="res://Assets/BigMedusaBlink5.png" id="8_knq72"]
+[ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="9_xvdhi"]
+[ext_resource type="Script" uid="uid://b2t5irl8lemwe" path="res://Scenes/BlinkingAnim.gd" id="10_oq4si"]
+[ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="12_eh0v1"]
 
-[node name="SettingsMenu" type="Control"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4egf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pxugv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eh0v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_am1vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g31lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_knq72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xvdhi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SettingsMenu" type="Control" unique_id=553694040]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,16 +129,86 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0fbet")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1144130821]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1244739282]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1807270749]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_62e2m")
+theme_override_font_sizes/normal_font_size = 96
+text = "Settings
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=306607083]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=980809581]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_62e2m")
+theme_override_font_sizes/normal_font_size = 48
+text = "Volume"
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=383328794]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1381520951]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1533985090]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_62e2m")
+theme_override_font_sizes/normal_font_size = 48
+text = "Enable Screams?"
+
+[node name="ScreamCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1095255278]
+layout_mode = 2
+
+[node name="StartGameButton" parent="MarginContainer/VBoxContainer" unique_id=1741236543 instance=ExtResource("3_pxugv")]
+custom_minimum_size = Vector2(480, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Backgound" parent="." unique_id=557425319 instance=ExtResource("3_0ytqx")]
+z_index = -4096
+position = Vector2(-13, -13)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Backgound" unique_id=76174319]
+position = Vector2(214, 379)
+scale = Vector2(0.7339313, 0.73393095)
+sprite_frames = SubResource("SpriteFrames_m4egf")
+script = ExtResource("10_oq4si")
+
+[node name="FadeIn" parent="." unique_id=2067833909 instance=ExtResource("12_eh0v1")]
+visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="MusicSlider" type="HSlider" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="ScreamCheck" type="CheckBox" parent="VBoxContainer"]
-layout_mode = 2
-
-[connection signal="value_changed" from="VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
-[connection signal="toggled" from="VBoxContainer/ScreamCheck" to="." method="_on_scream_check_toggled"]
+[connection signal="fadeIn" from="." to="FadeIn" method="_on_settings_menu_fade_in"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer2/ScreamCheck" to="." method="_on_scream_check_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]

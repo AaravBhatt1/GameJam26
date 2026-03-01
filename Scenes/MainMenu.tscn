@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://bhnkspdg0f10h"]
+[gd_scene load_steps=17 format=3 uid="uid://bhnkspdg0f10h"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
 [ext_resource type="PackedScene" uid="uid://bowh0inis067x" path="res://Scenes/UIButtons/QuitButton.tscn" id="2_8saeu"]
 [ext_resource type="FontFile" uid="uid://c8mrotqh6qy4n" path="res://Assets/Stone Tomb.otf" id="2_8um5k"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="3_8saeu"]
-[ext_resource type="PackedScene" uid="uid://qlaq2opm0tv7" path="res://Scenes/backgound.tscn" id="5_df05h"]
+[ext_resource type="PackedScene" uid="uid://dqxqv1lbum8ws" path="res://Scenes/UIButtons/SettingsButton.tscn" id="4_8e205"]
+[ext_resource type="PackedScene" uid="uid://c0e2wsnblsiy5" path="res://Scenes/backgound.tscn" id="5_df05h"]
 [ext_resource type="Texture2D" uid="uid://dfvvtqwk63c6u" path="res://Assets/BigMedusaBlink1.png" id="6_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://e0p0s7xeh7hi" path="res://Assets/BigMedusaBlink2.png" id="7_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://ceibyib76nium" path="res://Assets/bigMedusaIdle.png" id="7_xim88"]
@@ -125,28 +126,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MainMenu" type="Control" unique_id=1132692221]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -2.0
 offset_right = -2.0
 script = ExtResource("1_ghw46")
 
-[node name="Logo" type="TextureRect" parent="." unique_id=263649148]
+[node name="Logo" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 80.0
 offset_right = 460.0
 offset_bottom = 80.0
 
-[node name="Label" type="Label" parent="Logo" unique_id=616092318]
+[node name="Label" type="Label" parent="Logo"]
 layout_mode = 0
 offset_right = 950.0
 offset_bottom = 220.0
 text = "HARD FEELINGS"
 label_settings = SubResource("LabelSettings_xim88")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=560695266]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_top = 300.0
 offset_right = 1512.0
@@ -156,33 +157,36 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 1052
 theme_override_constants/margin_bottom = 568
 
-[node name="Menu" type="VBoxContainer" parent="MarginContainer" unique_id=2035948257]
+[node name="Menu" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Columns" type="HBoxContainer" parent="MarginContainer/Menu" unique_id=1682294660]
+[node name="Columns" type="HBoxContainer" parent="MarginContainer/Menu"]
 layout_mode = 2
 
-[node name="Buttons" type="VBoxContainer" parent="MarginContainer/Menu/Columns" unique_id=92263614]
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/Menu/Columns"]
 layout_mode = 2
 alignment = 1
 
-[node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1460196749 instance=ExtResource("1_853f1")]
+[node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("1_853f1")]
 layout_mode = 2
 
-[node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1014437804 instance=ExtResource("2_8saeu")]
+[node name="StartGameButton2" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("4_8e205")]
+layout_mode = 2
+
+[node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("2_8saeu")]
 layout_mode = 2
 SceneToLoad = "Quit"
 
-[node name="Backgound" parent="." unique_id=211379194 instance=ExtResource("5_df05h")]
+[node name="Backgound" parent="." instance=ExtResource("5_df05h")]
 z_index = -4096
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=188393748]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(900, 400)
 sprite_frames = SubResource("SpriteFrames_koqhg")
-frame_progress = 0.45737067
+frame_progress = 0.647979
 script = ExtResource("12_fh7cp")
 
-[node name="FadeIn" parent="." unique_id=172353803 instance=ExtResource("3_8saeu")]
+[node name="FadeIn" parent="." instance=ExtResource("3_8saeu")]
 visible = false
 layout_mode = 0
 anchors_preset = 0

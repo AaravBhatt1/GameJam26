@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqxqv1lbum8ws"]
+
+[ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_68w7c"]
+[ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_6plyi"]
+
+[node name="StartGameButton" unique_id=1741236543 instance=ExtResource("1_68w7c")]
+self_modulate = Color(1, 1, 1, 0)
+SceneToLoad = "res://control.tscn"
+
+[node name="Label" parent="." index="0" unique_id=1070044622]
+offset_left = 79.0
+offset_top = 2.0
+offset_right = 269.0
+offset_bottom = 57.0
+text = "SETTINGS"
+label_settings = ExtResource("2_6plyi")
+horizontal_alignment = 1
+vertical_alignment = 1
