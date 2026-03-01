@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cc6l1sh0e46k4" path="res://Scenes/pushable.gd" id="1_3wuyb"]
 [ext_resource type="AudioStream" uid="uid://dtaw745sjbxwy" path="res://Assets/SoundEffects/box.wav" id="2_js75i"]
 [ext_resource type="AudioStream" uid="uid://df70ri2d8frnf" path="res://Assets/SoundEffects/Stonifying.wav" id="3_cbo6s"]
+[ext_resource type="AudioStream" uid="uid://dj41k7addjkcc" path="res://Assets/SoundEffects/Scream1.wav" id="4_2o7br"]
+[ext_resource type="AudioStream" uid="uid://cigbj3r2k7m4c" path="res://Assets/SoundEffects/Scream2.wav" id="5_5swt6"]
+[ext_resource type="AudioStream" uid="uid://nk3bthw5uvld" path="res://Assets/SoundEffects/Scream3.wav" id="6_iy3bq"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uwp7h"]
 size = Vector2(16, 16)
@@ -28,3 +31,16 @@ volume_db = -10.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1230847020]
 stream = ExtResource("3_cbo6s")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=358138157]
+stream = ExtResource("4_2o7br")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1594504567]
+stream = ExtResource("5_5swt6")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." unique_id=1510502190]
+stream = ExtResource("6_iy3bq")
+
+[connection signal="finished" from="AudioStreamPlayer3" to="." method="_on_audio_stream_player_3_finished"]
+[connection signal="finished" from="AudioStreamPlayer4" to="." method="_on_audio_stream_player_4_finished"]
+[connection signal="finished" from="AudioStreamPlayer5" to="." method="_on_audio_stream_player_5_finished"]
