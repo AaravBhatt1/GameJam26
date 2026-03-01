@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ilmbsdrhbq14"]
+[gd_scene load_steps=11 format=3 uid="uid://ilmbsdrhbq14"]
 
 [ext_resource type="Script" uid="uid://cc6l1sh0e46k4" path="res://Scenes/pushable.gd" id="1_3wuyb"]
 [ext_resource type="AudioStream" uid="uid://dtaw745sjbxwy" path="res://Assets/SoundEffects/box.wav" id="2_js75i"]
@@ -9,6 +9,17 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_uwp7h"]
 size = Vector2(16, 16)
+
+[sub_resource type="Gradient" id="Gradient_m3d6t"]
+offsets = PackedFloat32Array(0.163333, 1)
+colors = PackedColorArray(0, 0, 0, 0.462745, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2o7br"]
+gradient = SubResource("Gradient_m3d6t")
+width = 13
+height = 8
+fill = 1
+fill_from = Vector2(0.490654, 0.375876)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fd37"]
 size = Vector2(14, 14)
@@ -23,8 +34,11 @@ script = ExtResource("1_3wuyb")
 scale = Vector2(0.6, 0.6)
 texture = SubResource("PlaceholderTexture2D_uwp7h")
 
-[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
-texture = SubResource("PlaceholderTexture2D_uwp7h")
+[node name="Shadow2" type="Sprite2D" parent="Sprite2D"]
+z_index = -1
+position = Vector2(2, 16)
+scale = Vector2(1.92308, 1.25)
+texture = SubResource("GradientTexture2D_2o7br")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7fd37")
