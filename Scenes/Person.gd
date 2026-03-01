@@ -42,13 +42,16 @@ func SetSprite():
 				EnemyState.Henchmen: 
 					sprite.play("left-hench")
 					#tex = load("res://Assets/EnemySprites/EnemySpriteLeft.png")
-				_: sprite.play("left-civ")
+				_:	
+					sprite.play("left-civ")
+					print("a")
 					#tex = load("res://Assets/EnemySprites/CivillianSpriteLeft.png")
 		Vector2.RIGHT:
 			match EnemyStatus:
 				EnemyState.Target: pass
 					#tex = load("res://Assets/EnemySprites/TargetSpriteRight.png")
 				EnemyState.Henchmen:
+					
 					sprite.play("right-hench")
 					#tex = load("res://Assets/EnemySprites/EnemySpriteRight.png")
 				_: sprite.play("right-civ")

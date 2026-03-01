@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbphairtkgj3w"
-path="res://.godot/imported/grayscale_100.png-1dc65c2e8e6d20e137112668878cff71.ctex"
+uid="uid://cm0b7cw7qvmcs"
+path="res://.godot/imported/Civilian_idle.png-3cbd826fa2a0e99dc235f54f395691a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/henchmanToStone/grayscale_100.png"
-dest_files=["res://.godot/imported/grayscale_100.png-1dc65c2e8e6d20e137112668878cff71.ctex"]
+source_file="res://Assets/Civilian_idle.png"
+dest_files=["res://.godot/imported/Civilian_idle.png-3cbd826fa2a0e99dc235f54f395691a9.ctex"]
 
 [params]
 
