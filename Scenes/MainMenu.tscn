@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bhnkspdg0f10h"]
+[gd_scene format=3 uid="uid://bhnkspdg0f10h"]
 
 [ext_resource type="PackedScene" uid="uid://ceyqtcqc1wmhf" path="res://Scenes/UIButtons/StartGameButton.tscn" id="1_853f1"]
 [ext_resource type="Script" uid="uid://dvqtm5lvby74f" path="res://Scenes/MainMenu.gd" id="1_ghw46"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cetafxwlr8s58" path="res://Assets/BigMedusaBlink4.png" id="9_7467j"]
 [ext_resource type="Texture2D" uid="uid://dwucs756o3nvk" path="res://Assets/BigMedusaBlink5.png" id="10_2x1g0"]
 [ext_resource type="Script" uid="uid://b2t5irl8lemwe" path="res://Scenes/BlinkingAnim.gd" id="12_fh7cp"]
+[ext_resource type="AudioStream" uid="uid://vxbpwtqs3o2a" path="res://Assets/SoundEffects/Main_theme.wav" id="15_7467j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xim88"]
 font = ExtResource("2_8um5k")
@@ -126,28 +127,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1316195514]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -2.0
 offset_right = -2.0
 script = ExtResource("1_ghw46")
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="." unique_id=1875895192]
 layout_mode = 0
 offset_left = 100.0
 offset_top = 80.0
 offset_right = 460.0
 offset_bottom = 80.0
 
-[node name="Label" type="Label" parent="Logo"]
+[node name="Label" type="Label" parent="Logo" unique_id=1684058200]
 layout_mode = 0
 offset_right = 950.0
 offset_bottom = 220.0
 text = "HARD FEELINGS"
 label_settings = SubResource("LabelSettings_xim88")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=145056371]
 layout_mode = 0
 offset_top = 300.0
 offset_right = 1512.0
@@ -157,36 +158,37 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 1052
 theme_override_constants/margin_bottom = 568
 
-[node name="Menu" type="VBoxContainer" parent="MarginContainer"]
+[node name="Menu" type="VBoxContainer" parent="MarginContainer" unique_id=224612129]
 layout_mode = 2
 
-[node name="Columns" type="HBoxContainer" parent="MarginContainer/Menu"]
+[node name="Columns" type="HBoxContainer" parent="MarginContainer/Menu" unique_id=1550385069]
 layout_mode = 2
 
-[node name="Buttons" type="VBoxContainer" parent="MarginContainer/Menu/Columns"]
+[node name="Buttons" type="VBoxContainer" parent="MarginContainer/Menu/Columns" unique_id=1789169405]
 layout_mode = 2
 alignment = 1
 
-[node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("1_853f1")]
+[node name="StartGameButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1291081652 instance=ExtResource("1_853f1")]
+custom_minimum_size = Vector2(360, 100)
 layout_mode = 2
 
-[node name="StartGameButton2" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("4_8e205")]
+[node name="StartGameButton2" parent="MarginContainer/Menu/Columns/Buttons" unique_id=49060835 instance=ExtResource("4_8e205")]
 layout_mode = 2
 
-[node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" instance=ExtResource("2_8saeu")]
+[node name="QuitButton" parent="MarginContainer/Menu/Columns/Buttons" unique_id=1084436197 instance=ExtResource("2_8saeu")]
 layout_mode = 2
 SceneToLoad = "Quit"
 
-[node name="Backgound" parent="." instance=ExtResource("5_df05h")]
+[node name="Backgound" parent="." unique_id=1648759955 instance=ExtResource("5_df05h")]
 z_index = -4096
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1538053787]
 position = Vector2(900, 400)
 sprite_frames = SubResource("SpriteFrames_koqhg")
 frame_progress = 0.647979
 script = ExtResource("12_fh7cp")
 
-[node name="FadeIn" parent="." instance=ExtResource("3_8saeu")]
+[node name="FadeIn" parent="." unique_id=353741395 instance=ExtResource("3_8saeu")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -194,5 +196,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2089318973]
+stream = ExtResource("15_7467j")
 
 [connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]

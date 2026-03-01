@@ -48,3 +48,4 @@ numGuards = 2
 
 [node name="SceneManager" parent="." unique_id=2139039709 instance=ExtResource("5_ga25t")]
 LevelToLoad = "res://Scenes/level3.tscn"
+LevelSong = "res://Assets/SoundEffects/Main_theme_developed.wav"
