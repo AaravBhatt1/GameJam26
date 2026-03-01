@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://5rmaojcqxf5c"]
+[gd_scene load_steps=5 format=3 uid="uid://5rmaojcqxf5c"]
 
 [ext_resource type="Script" uid="uid://d1vutufdh11gf" path="res://Scenes/FadeIn.gd" id="1_6ppj7"]
 
 [sub_resource type="Animation" id="Animation_6ppj7"]
-resource_name = "FadeInAnim"
+resource_name = "fadeIn"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -33,13 +33,13 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5djug"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_12aqm"]
 _data = {
-&"FadeInAnim": SubResource("Animation_6ppj7"),
-&"RESET": SubResource("Animation_5djug")
+&"RESET": SubResource("Animation_5djug"),
+&"fadeIn": SubResource("Animation_6ppj7")
 }
 
-[node name="FadeIn" type="ColorRect" unique_id=880183877]
+[node name="FadeIn" type="ColorRect"]
 z_index = 5
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +51,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 script = ExtResource("1_6ppj7")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2111928687]
-libraries/ = SubResource("AnimationLibrary_5djug")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_12aqm")
+}
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
