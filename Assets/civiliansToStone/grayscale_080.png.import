@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3x4mu8fna644"
-path="res://.godot/imported/henchman.png-6496a6281e5b4e7405db1f809825014b.ctex"
+uid="uid://btlq7l8j0lqck"
+path="res://.godot/imported/grayscale_080.png-0ac9f9a8d82809ddb2212b25688f463e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/henchman.png"
-dest_files=["res://.godot/imported/henchman.png-6496a6281e5b4e7405db1f809825014b.ctex"]
+source_file="res://Assets/civiliansToStone/grayscale_080.png"
+dest_files=["res://.godot/imported/grayscale_080.png-0ac9f9a8d82809ddb2212b25688f463e.ctex"]
 
 [params]
 

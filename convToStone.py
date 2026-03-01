@@ -53,4 +53,6 @@ def progressive_bottom_grayscale(
         working_img.save(output_path)
         print(f"Saved: {output_path}")
 
-progressive_bottom_grayscale("inp.png", "stoneGuys")
+p = input("path?")
+progressive_bottom_grayscale(p, "stoneGuys")
+
