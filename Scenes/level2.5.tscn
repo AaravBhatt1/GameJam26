@@ -42,9 +42,9 @@ up_direction = Vector2(0, 1)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 2
 
-[node name="SceneManager" parent="." unique_id=2139039709 instance=ExtResource("5_ga25t")]
-LevelToLoad = "res://Scenes/level3.tscn"
-
 [node name="WinManager" type="Node" parent="." unique_id=683907240]
 script = ExtResource("6_t6bxd")
 numGuards = 2
+
+[node name="SceneManager" parent="." unique_id=2139039709 instance=ExtResource("5_ga25t")]
+LevelToLoad = "res://Scenes/level3.tscn"

@@ -41,9 +41,6 @@ direction = false
 [node name="Mirror2" parent="." unique_id=141472433 instance=ExtResource("5_21ycj")]
 position = Vector2(120, -56)
 
-[node name="SceneManager" parent="." unique_id=797528164 instance=ExtResource("6_egqhl")]
-LevelToLoad = "res://Scenes/HellLevel.tscn"
-
 [node name="Henchmen3" parent="." unique_id=730449483 instance=ExtResource("4_7u67b")]
 position = Vector2(8, 24)
 CurrentDirection = Vector2(1, 0)
@@ -67,3 +64,6 @@ EnemyStatus = 2
 [node name="WinManager" type="Node" parent="." unique_id=1587057303]
 script = ExtResource("7_ohik4")
 numGuards = 4
+
+[node name="SceneManager" parent="." unique_id=797528164 instance=ExtResource("6_egqhl")]
+LevelToLoad = "res://Scenes/HellLevel.tscn"

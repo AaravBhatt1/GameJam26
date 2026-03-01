@@ -33,9 +33,6 @@ position = Vector2(-40, -8)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
-[node name="SceneManager" parent="." unique_id=212760595 instance=ExtResource("5_y4dr7")]
-LevelToLoad = "res://Scenes/level2.5.tscn"
-
 [node name="WinManager" type="Node" parent="." unique_id=1517283757]
 script = ExtResource("6_didp7")
 
@@ -43,3 +40,7 @@ script = ExtResource("6_didp7")
 position = Vector2(88, 40)
 CurrentDirection = Vector2(0, -1)
 EnemyStatus = 2
+
+[node name="SceneManager" parent="." unique_id=212760595 instance=ExtResource("5_y4dr7")]
+scale = Vector2(0.99999994, 0.99999994)
+LevelToLoad = "res://Scenes/level2.5.tscn"

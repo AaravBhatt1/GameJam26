@@ -76,10 +76,6 @@ backwards = true
 [node name="Mirror8" parent="." unique_id=1391548349 instance=ExtResource("5_wjh0p")]
 position = Vector2(-24, 40)
 
-[node name="SceneManager" parent="." unique_id=194133710 instance=ExtResource("6_6xhgd")]
-position = Vector2(91.4, -36.8)
-LevelToLoad = "res://Scenes/WinScreen.tscn"
-
 [node name="WinManager" type="Node" parent="." unique_id=1505274492]
 script = ExtResource("7_5xav8")
 numGuards = 2
@@ -116,3 +112,8 @@ position = Vector2(-136, 56)
 scale = Vector2(0.99999976, 0.99999976)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
+
+[node name="SceneManager" parent="." unique_id=194133710 instance=ExtResource("6_6xhgd")]
+position = Vector2(91.399994, -36.8)
+scale = Vector2(0.99999994, 0.99999994)
+LevelToLoad = "res://Scenes/WinScreen.tscn"
