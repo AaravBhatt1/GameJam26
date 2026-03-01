@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dnc457q4eif82"]
+[gd_scene load_steps=6 format=4 uid="uid://dnc457q4eif82"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_jaajx"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_mrxql"]
@@ -6,54 +6,54 @@
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_1x0xh"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="5_h3ll2"]
 
-[node name="Level2" type="Node2D" unique_id=938443533]
+[node name="Level2" type="Node2D"]
 scale = Vector2(5.2, 5.2)
 
-[node name="Camera" type="Camera2D" parent="." unique_id=267095133]
+[node name="Camera" type="Camera2D" parent="."]
 
-[node name="Level" type="TileMapLayer" parent="." unique_id=1589570060]
+[node name="Level" type="TileMapLayer" parent="."]
 z_index = -1
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAD4/wMAAQAKABEAAAAAAAMAAwAAAAAAAAABAAMAAwAAAAAAAAACAAMAAwAAAAAAAAADAAMAAwAAAAAAAAAEAAMAAwAAAAAAAAAFAAMAAwAAAAAAAAAGAAMAAwAAAAIAAAAHAAMAAQAKABEAAAAHAAQAAQAKABEAAAAGAAQAAwAAAAIAAAAFAAQAAwAAAAIAAAAEAAQAAwAAAAIAAAADAAQAAwAAAAIAAAACAAQAAwAAAAIAAAABAAQAAwAAAAIAAAAAAAQAAwAAAAIAAAD//wQAAwAAAAIAAAD+/wQAAwAAAAIAAAD9/wQAAwAAAAIAAAD8/wQAAwAAAAIAAAD7/wQAAwAAAAIAAAD6/wQAAwAAAAIAAAD5/wQAAwAAAAIAAAD4/wQAAQAKABEAAAD4/wIAAQAKABEAAAD9/wEAAwAAAAAAAAAAAAEAAwAAAAAAAAABAAEAAwAAAAAAAAACAAEAAwACAAEAAAADAAEAAwAAAAMAAAAEAAEAAwAAAAAAAAAFAAEAAwAAAAAAAAAGAAEAAwAAAAIAAAAHAAEAAQAKABEAAAAHAAIAAQAKABEAAAAGAAIAAwAAAAIAAAD4/wEAAQAKABEAAAD4/wAAAQAKABEAAAD4////AQAKABEAAAD9/wAAAwAAAAMAAAABAAAAAwACAAEAAAACAAAAAwACAAEAAAADAAAAAwACAAEAAAAEAAAAAwAAAAAAAAAFAAAAAwAAAAAAAAAGAAAAAwAAAAIAAAAHAAAAAQAKABEAAAAHAP//AQAKABEAAAAGAP//AwAAAAIAAAAFAP//AwAAAAAAAAAEAP//AwAAAAAAAAADAP//AwAAAAAAAAACAP//AwAAAAAAAAABAP//AwACAAEAAAAAAP//AwAAAAAAAAD/////AwAAAAAAAAD+////AwAAAAAAAAD4//7/AQAKABEAAAABAP3/AwADAAEAAAACAP3/AwADAAEAAAACAP7/AwAAAAAAAAADAP7/AwAAAAAAAAAEAP7/AwAAAAAAAAAFAP7/AwAAAAAAAAAGAP7/AwAAAAIAAAAHAP7/AQAKABEAAAAFAP3/AwAAAAAAAAAEAP3/AwAAAAAAAAADAP3/AwAAAAAAAAABAP7/AwAAAAAAAAD4//z/AQAKABEAAAD4//3/AQAKABEAAAAGAP3/AwAAAAIAAAAHAP3/AQAKABEAAAAHAPz/AQAKABEAAAAGAPz/AwAAAAIAAAAFAPz/AwADAAQAAAAEAPz/AwADAAQAAAADAPz/AwADAAQAAAACAPv/AwAAAAIAAAABAPv/AwAAAAIAAAAAAPv/AwAAAAIAAAD///v/AwAAAAIAAAD+//v/AwAAAAIAAAD9//v/AwAAAAIAAAD8//v/AwAAAAIAAAD4//v/AQAKABEAAAABAPz/AwADAAQAAAADAPv/AwAAAAIAAAAEAPv/AwAAAAIAAAAFAPv/AwAAAAIAAAAHAPv/AQAKABEAAAAGAPv/AwAAAAIAAAD5//v/AwAAAAIAAAD5//z/AwAAAAIAAAD5//3/AwAAAAIAAAD5/wMAAwAAAAIAAAD5/wIAAwAAAAIAAAD5/wEAAwAAAAIAAAD5/wAAAwAAAAIAAAD5////AwAAAAIAAAD5//7/AwAAAAIAAAAIAAQAAQAKABEAAAAIAAMAAQAKABEAAAAIAAIAAQAKABEAAAAIAAEAAQAKABEAAAAIAAAAAQAKABEAAAAIAP//AQAKABEAAAAIAP7/AQAKABEAAAAIAP3/AQAKABEAAAAIAPz/AQAKABEAAAAIAPv/AQAKABEAAAD7//v/AwAAAAIAAAD6//v/AwAAAAIAAAD6/wMAAwAAAAIAAAD7/wMAAwAEAAEAAAD8/wMAAwADAAEAAAD9/wMAAwADAAEAAAD+/wMAAwADAAEAAAAAAPz/AwADAAQAAAD///z/AwADAAQAAAD+//z/AwADAAQAAAD9//z/AwADAAQAAAD8//z/AwADAAQAAAD7//z/AwADAAQAAAD6//z/AwADAAQAAAD9//3/AwAAAAAAAAD9//7/AwADAAEAAAD+//7/AwAAAAAAAAD+//3/AwAAAAAAAAD///3/AwAAAAAAAAD///7/AwAAAAAAAAAAAP7/AwAAAAAAAAAAAP3/AwADAAEAAAACAAIAAwADAAEAAAD9////AwADAAEAAAD6//3/AwAAAAAAAAD7//3/AwAAAAAAAAD8//3/AwAAAAAAAAD8//7/AwADAAEAAAD7//7/AwADAAEAAAD6//7/AwAAAAAAAAD6////AwAAAAAAAAD7////AwADAAEAAAD8////AwADAAEAAAD8/wAAAwADAAEAAAD7/wAAAwAAAAAAAAD6/wAAAwAAAAAAAAD6/wEAAwAAAAAAAAD7/wEAAwAAAAAAAAD8/wEAAwAAAAAAAAD8/wIAAwADAAEAAAD7/wIAAwAAAAEAAAD6/wIAAwACAAAAAAD9/wIAAwADAAEAAAD+/wIAAwADAAEAAAD//wIAAwAAAAAAAAAAAAIAAwAAAAAAAAABAAIAAwAAAAAAAAD//wEAAwAAAAAAAAD+/wAAAwAAAAAAAAD+/wEAAwAAAAAAAAAAAAAAAwAAAAAAAAAEAAIAAwAAAAAAAAADAAIAAwAAAAMAAAAFAAIAAwAAAAAAAAD//wMAAwAAAAAAAAAGAPr/AwAAAAIAAAAFAPr/AwAAAAIAAAACAPz/AwADAAQAAAD//wAAAwAAAAMAAAA=")
 tile_set = ExtResource("1_jaajx")
 
-[node name="Medusa" parent="." unique_id=427198451 instance=ExtResource("2_mrxql")]
+[node name="Medusa" parent="." instance=ExtResource("2_mrxql")]
 position = Vector2(88, -8)
 
-[node name="TickManager" type="Node" parent="." unique_id=240012921]
+[node name="TickManager" type="Node" parent="."]
 script = ExtResource("3_qrg6c")
 
-[node name="Timer" type="Timer" parent="TickManager" unique_id=1435822816]
+[node name="Timer" type="Timer" parent="TickManager"]
 one_shot = true
 
-[node name="God" parent="." unique_id=1760143639 instance=ExtResource("4_1x0xh")]
+[node name="God" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(88, -24)
 CurrentDirection = Vector2(-1, 0)
 
-[node name="Henchman" parent="." unique_id=253917862 instance=ExtResource("4_1x0xh")]
+[node name="Henchman" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(72, -24)
 EnemyStatus = 2
 
-[node name="Civillian3" parent="." unique_id=1981423340 instance=ExtResource("4_1x0xh")]
+[node name="Civillian3" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(-88, -24)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
-[node name="Civillian4" parent="." unique_id=720919292 instance=ExtResource("4_1x0xh")]
+[node name="Civillian4" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(-88, 24)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 1
 
-[node name="Henchman3" parent="." unique_id=1137628797 instance=ExtResource("4_1x0xh")]
+[node name="Henchman3" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(-8, 40)
 CurrentDirection = Vector2(0, -1)
 EnemyStatus = 2
 
-[node name="Henchman4" parent="." unique_id=16477798 instance=ExtResource("4_1x0xh")]
+[node name="Henchman4" parent="." instance=ExtResource("4_1x0xh")]
 position = Vector2(-72, 8)
 up_direction = Vector2(0, 1)
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 2
 
-[node name="SceneManager" parent="." unique_id=1950141516 instance=ExtResource("5_h3ll2")]
+[node name="SceneManager" parent="." instance=ExtResource("5_h3ll2")]
 LevelToLoad = "res://Scenes/level4.tscn"

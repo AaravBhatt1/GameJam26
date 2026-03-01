@@ -106,7 +106,7 @@ func fireRay():
 				break
 
 			var collider = ray.get_collider()
-			var hit_point = ray.get_collision_point()
+			var hit_point = ray.get_collision_point() + (current_dir *33)
 			ray_path.append(to_local(hit_point))
 
 			if collider.is_in_group("Enemy"):
