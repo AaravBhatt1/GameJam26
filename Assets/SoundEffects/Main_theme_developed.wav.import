@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< HEAD
-uid="uid://d1t7juj428g8h"
-=======
-uid="uid://cvcoxrcr4d8am"
->>>>>>> 764f7710d7545170358c3546e7a51c9928db8b79
+uid="uid://cw2sytfbla0lx"
 path="res://.godot/imported/Main_theme_developed.wav-51a23ac16779fbb4090807a63e2d5823.sample"
 
 [deps]
@@ -22,11 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-<<<<<<< HEAD
 edit/loop_mode=0
-=======
-edit/loop_mode=2
->>>>>>> 764f7710d7545170358c3546e7a51c9928db8b79
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2
