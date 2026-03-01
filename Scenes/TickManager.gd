@@ -8,18 +8,22 @@ var blocked = false
 func _process(_delta):
 	if not timer.is_stopped():
 		return
-		
+
 	if blocked: return
 
 	var dir = Vector2i.ZERO
-	
+
 	if Input.is_action_pressed("MoveUp"):    dir = Vector2i.UP
 	elif Input.is_action_pressed("MoveDown"):  dir = Vector2i.DOWN
 	elif Input.is_action_pressed("MoveLeft"):  dir = Vector2i.LEFT
 	elif Input.is_action_pressed("MoveRight"): dir = Vector2i.RIGHT
 	elif Input.is_action_pressed("Wait"):      dir = Vector2i.ZERO
-	else: return
+	elif Input.is_action_pressed("Restart"): RestartLevel()
+	else:
+		return
 
 	timer.start(TICK_DURATION)
 	GameTick.tick.emit(dir)
-	
+
+func RestartLevel():
+	get_tree().reload_current_scene()
