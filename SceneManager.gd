@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var LevelToLoad : String
+@export var LevelSong: String = "res://Assets/SoundEffects/Main_theme.wav" 
 var LevelFailed = false;
 
 func _ready():
@@ -10,11 +11,12 @@ func _ready():
 		enemy.LevelFailed.connect(ReloadLevel)
 	for medusa in get_tree().get_nodes_in_group("Medusa"):
 		medusa.LevelFailed.connect(ReloadLevel)
+	$AudioStreamPlayer3.stream = load(LevelSong)
+	$AudioStreamPlayer3.play()
 
 func LoadLevel():
 	if !LevelFailed:
-		$Control/FadeIn.show()
-		$Control/FadeIn.fadeIn()
+		$AudioStreamPlayer2.play()
 	
 func ReloadLevel():
 	LevelFailed = true
@@ -42,3 +44,8 @@ func _on_fade_in_fade_finished() -> void:
 func _on_audio_stream_player_finished() -> void:
 	$Control/FadeIn.show()
 	$Control/FadeIn.fadeIn()
+
+
+func _on_audio_stream_player_2_finished() -> void:
+		$Control/FadeIn.show()
+		$Control/FadeIn.fadeIn()
