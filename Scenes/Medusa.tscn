@@ -102,7 +102,8 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xourp")
 animation = &"walk-sideways"
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+[node name="Shadow" type="Sprite2D" parent="AnimatedSprite2D"]
+z_index = -1
 position = Vector2(2, 16)
 scale = Vector2(1.92308, 1.25)
 texture = SubResource("GradientTexture2D_a7hbm")

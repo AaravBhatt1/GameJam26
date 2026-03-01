@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" format=3 uid="uid://cfp8xkdkv3fsu"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cfp8xkdkv3fsu"]
 
 [ext_resource type="Texture2D" uid="uid://626bnn5r6l8y" path="res://Assets/floortiles.png" id="1_2urvg"]
 
@@ -14,7 +14,6 @@ use_texture_padding = false
 1:1/0 = 0
 1:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:1/0 = 0
 2:1/0 = 0
 1:0/0 = 0
