@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ceyqtcqc1wmhf"]
+[gd_scene format=3 uid="uid://ceyqtcqc1wmhf"]
 
 [ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_pc8b0"]
 [ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_avmif"]
 
-[node name="StartGameButton" instance=ExtResource("1_pc8b0")]
+[node name="StartGameButton" unique_id=1741236543 instance=ExtResource("1_pc8b0")]
 self_modulate = Color(1, 1, 1, 0)
+SceneToLoad = "res://Scenes/LoreScreen.tscn"
 
-[node name="Label" parent="." index="0"]
+[node name="Label" parent="." index="0" unique_id=1070044622]
 offset_left = 79.0
 offset_top = 2.0
 offset_right = 269.0

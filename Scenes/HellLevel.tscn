@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=8 format=4 uid="uid://dobdrt5b86avl"]
+=======
+[gd_scene load_steps=7 format=4 uid="uid://c8j8oykf6wdft"]
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_1s6y6"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_5xav8"]
@@ -12,7 +16,11 @@
 scale = Vector2(5, 5)
 
 [node name="Camera" type="Camera2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(-37.399998, 18.8)
+=======
+position = Vector2(-37.4, 18.8)
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 zoom = Vector2(0.75, 0.75)
 
 [node name="Level" type="TileMapLayer" parent="."]
@@ -47,42 +55,47 @@ direction = false
 
 [node name="Mirror2" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(24, 24)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 
 [node name="Mirror3" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(24, 88)
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(1, 1)
 direction = false
 backwards = true
 
 [node name="Mirror4" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-104, 72)
-scale = Vector2(0.9999996, 0.9999996)
+scale = Vector2(1, 1)
 backwards = true
 
 [node name="Mirror5" parent="." instance=ExtResource("5_wjh0p")]
+<<<<<<< HEAD
 position = Vector2(-23.999985, 72.00002)
 scale = Vector2(0.99999917, 0.99999917)
+=======
+position = Vector2(-24, 72)
+scale = Vector2(0.999999, 0.999999)
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 direction = false
 backwards = true
 
 [node name="Mirror6" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 24)
-scale = Vector2(0.9999982, 0.9999982)
+scale = Vector2(0.999998, 0.999998)
 direction = false
 
 [node name="Mirror7" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-72, 88)
-scale = Vector2(0.9999963, 0.9999963)
+scale = Vector2(0.999996, 0.999996)
 backwards = true
 
 [node name="Mirror8" parent="." instance=ExtResource("5_wjh0p")]
 position = Vector2(-24, 40)
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(1, 1)
 
 [node name="SceneManager" parent="." instance=ExtResource("6_6xhgd")]
 position = Vector2(91.4, -36.8)
-scale = Vector2(0.9999998, 0.9999998)
+scale = Vector2(1, 1)
 LevelToLoad = "res://Scenes/MainMenu.tscn"
 
 [node name="WinManager" type="Node" parent="."]

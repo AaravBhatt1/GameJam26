@@ -331,6 +331,7 @@ fill = 1
 fill_from = Vector2(0.490654, 0.375876)
 
 [node name="Medusa" type="CharacterBody2D" groups=["Medusa"]]
+z_index = 2
 collision_layer = 5
 collision_mask = 3
 script = ExtResource("1_od7hl")
@@ -372,5 +373,6 @@ stream = ExtResource("6_1osp3")
 volume_db = -25.0
 
 [node name="Line2D" type="Line2D" parent="."]
+z_index = -1
 width = 3.0
-default_color = Color(1, 1, 0.7372549, 1)
+default_color = Color(1, 1, 0.737255, 1)

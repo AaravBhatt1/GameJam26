@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=4 uid="uid://cmc0600phx1ft"]
+=======
+[gd_scene load_steps=6 format=4 uid="uid://dnc457q4eif82"]
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_jaajx"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_mrxql"]
