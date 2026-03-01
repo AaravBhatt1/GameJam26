@@ -1,6 +1,12 @@
 extends CharacterBody2D
 
+@export var sprite_texture: Texture2D
+
+@onready var sprite: Sprite2D = $Sprite2D
+
 func _ready() -> void:
+	if sprite_texture:
+		sprite.texture = sprite_texture
 	if Settingstore.scream_on:
 		var screamNum= randf()
 		if screamNum <0.45:
@@ -9,6 +15,7 @@ func _ready() -> void:
 			$AudioStreamPlayer5.play()
 		else:
 			$AudioStreamPlayer4.play()
+
 
 func PlaySound():
 	$AudioStreamPlayer.play()

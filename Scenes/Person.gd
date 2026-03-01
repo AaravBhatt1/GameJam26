@@ -105,11 +105,42 @@ func turnedStone():
 func ReplaceWithBox():
 	var box_scene = load("res://Scenes/pushable.tscn")
 	var box = box_scene.instantiate()
+	match EnemyStatus:
+		EnemyState.Target:
+			pass
+		EnemyState.Civillian:
+			var a
+			match CurrentDirection:
+				Vector2.UP:
+					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-back.png")
+				Vector2.DOWN:
+					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-front.png")
+				Vector2.LEFT:
+					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-left.png")
+				Vector2.RIGHT:
+					box.sprite_texture = preload("res://Assets/civiliansToStone/stone-civ-right.png")
+			
+		_:
+			var a
+			match CurrentDirection:
+				Vector2.UP:
+					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-down.png")
+				Vector2.DOWN:
+					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-front.png")
+				Vector2.LEFT:
+					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-left.png")
+				Vector2.RIGHT:
+					box.sprite_texture = preload("res://Assets/henchmanToStone/stone-guard-right.png")
+			
+	# Set asset BEFORE or immediately after instantiation
+	
+
 	add_sibling(box)
-	box.global_position = self.global_position
-	if  EnemyStatus == EnemyState.Target:
+	box.global_position = global_position
+
+	if EnemyStatus == EnemyState.Target:
 		LevelWon.emit()
-	elif  EnemyStatus == EnemyState.Henchmen:
+	elif EnemyStatus == EnemyState.Henchmen:
 		var target = get_tree().current_scene.find_child("WinManager")
 		target.guardDeath()
 	elif EnemyStatus == EnemyState.Civillian:

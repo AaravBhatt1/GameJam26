@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ilmbsdrhbq14"]
+[gd_scene load_steps=9 format=3 uid="uid://ilmbsdrhbq14"]
 
 [ext_resource type="Script" uid="uid://cc6l1sh0e46k4" path="res://Scenes/pushable.gd" id="1_3wuyb"]
 [ext_resource type="AudioStream" uid="uid://dtaw745sjbxwy" path="res://Assets/SoundEffects/box.wav" id="2_js75i"]
@@ -13,32 +13,36 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fd37"]
 size = Vector2(14, 14)
 
-[node name="Pushable" type="CharacterBody2D" unique_id=764761338 groups=["Enemy"]]
+[node name="Pushable" type="CharacterBody2D" groups=["Enemy"]]
 collision_mask = 3
 slide_on_ceiling = false
 floor_stop_on_slope = false
 script = ExtResource("1_3wuyb")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=517619071]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
 texture = SubResource("PlaceholderTexture2D_uwp7h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=583412455]
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+texture = SubResource("PlaceholderTexture2D_uwp7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7fd37")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1482437101]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_js75i")
 volume_db = -10.0
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1230847020]
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_cbo6s")
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=358138157]
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_2o7br")
 
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." unique_id=1594504567]
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5swt6")
 
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." unique_id=1510502190]
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_iy3bq")
 
 [connection signal="finished" from="AudioStreamPlayer3" to="." method="_on_audio_stream_player_3_finished"]
