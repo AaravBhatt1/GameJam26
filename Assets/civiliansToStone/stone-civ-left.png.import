@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8f17bi584d0e"
-path="res://.godot/imported/grayscale_010.png-8b2fa9b2c8a821bff7399270ddafba55.ctex"
+uid="uid://bnektskvt1w1a"
+path="res://.godot/imported/stone-civ-left.png-7c030f5f7229cbe9f4cf41c41a98f3e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/henchmanToStone/grayscale_010.png"
-dest_files=["res://.godot/imported/grayscale_010.png-8b2fa9b2c8a821bff7399270ddafba55.ctex"]
+source_file="res://Assets/civiliansToStone/stone-civ-left.png"
+dest_files=["res://.godot/imported/stone-civ-left.png-7c030f5f7229cbe9f4cf41c41a98f3e7.ctex"]
 
 [params]
 
