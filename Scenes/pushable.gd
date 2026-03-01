@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 func _ready() -> void:
-	var screamNum= randf()
-	if screamNum <0.45:
-		$AudioStreamPlayer3.play()
-	elif screamNum <0.95:
-		$AudioStreamPlayer5.play()
-	else:
-		$AudioStreamPlayer4.play()
+	if Settingstore.scream_on:
+		var screamNum= randf()
+		if screamNum <0.45:
+			$AudioStreamPlayer3.play()
+		elif screamNum <0.95:
+			$AudioStreamPlayer5.play()
+		else:
+			$AudioStreamPlayer4.play()
 
 func PlaySound():
 	$AudioStreamPlayer.play()

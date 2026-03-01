@@ -7,12 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="5_21ycj"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_egqhl"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level2" type="Node2D"]
 scale = Vector2(4.3, 4.3)
 
 [node name="Henchmen2" parent="." instance=ExtResource("4_7u67b")]
 position = Vector2(-8, 24)
-scale = Vector2(1, 1)
 up_direction = Vector2(-1, 0)
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 2
@@ -40,21 +39,17 @@ direction = false
 
 [node name="Mirror2" parent="." instance=ExtResource("5_21ycj")]
 position = Vector2(120, -56)
-scale = Vector2(1, 1)
 
 [node name="SceneManager" parent="." instance=ExtResource("6_egqhl")]
-scale = Vector2(1, 1)
 LevelToLoad = "res://Scenes/HellLevel.tscn"
 
 [node name="Henchmen3" parent="." instance=ExtResource("4_7u67b")]
 position = Vector2(8, 24)
-scale = Vector2(1, 1)
 CurrentDirection = Vector2(1, 0)
 EnemyStatus = 2
 
 [node name="Civilian" parent="." instance=ExtResource("4_7u67b")]
 position = Vector2(40, -24)
-scale = Vector2(1, 1)
 CurrentDirection = Vector2(-1, 0)
 EnemyStatus = 1
 
