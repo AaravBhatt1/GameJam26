@@ -5,8 +5,8 @@ extends Node2D
 var LevelFailed = false;
 
 func _ready():
-	for enemy in get_tree().get_nodes_in_group("Enemy"):
-		enemy.LevelWon.connect(LoadLevel)
+	var target = get_tree().current_scene.find_child("WinManager")
+	target.LevelWon.connect(LoadLevel)
 	for enemy in get_tree().get_nodes_in_group("Enemy"):
 		enemy.LevelFailed.connect(ReloadLevel)
 	for medusa in get_tree().get_nodes_in_group("Medusa"):
