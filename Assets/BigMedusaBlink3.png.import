@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs6eh6u8rxtfn"
-path="res://.godot/imported/MedusaSpriteDown.png-2acfc409fb926fd4aee4b63a1045d8ac.ctex"
+uid="uid://r0ka82caemvr"
+path="res://.godot/imported/BigMedusaBlink3.png-109c469c25b3c8baebcb2e94037957e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MedusaSprites/MedusaSpriteDown.png"
-dest_files=["res://.godot/imported/MedusaSpriteDown.png-2acfc409fb926fd4aee4b63a1045d8ac.ctex"]
+source_file="res://Assets/BigMedusaBlink3.png"
+dest_files=["res://.godot/imported/BigMedusaBlink3.png-109c469c25b3c8baebcb2e94037957e6.ctex"]
 
 [params]
 

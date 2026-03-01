@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=8 format=4 uid="uid://dphasb0sy3i3u"]
+=======
 [gd_scene load_steps=7 format=4 uid="uid://b3yghbtvk7ild"]
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_46vi4"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_ohik4"]
@@ -6,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_7u67b"]
 [ext_resource type="PackedScene" uid="uid://c8jyhyyk4a043" path="res://Scenes/mirror.tscn" id="5_21ycj"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="6_egqhl"]
+[ext_resource type="Script" uid="uid://ds8dbhjumgq50" path="res://Scenes/win_manager.gd" id="7_ohik4"]
 
 [node name="Level2" type="Node2D"]
 scale = Vector2(4.3, 4.3)
@@ -41,6 +46,11 @@ direction = false
 position = Vector2(120, -56)
 
 [node name="SceneManager" parent="." instance=ExtResource("6_egqhl")]
+<<<<<<< HEAD
+scale = Vector2(0.99999994, 0.99999994)
+=======
+scale = Vector2(1, 1)
+>>>>>>> cf76a08603dba35ffa7e1f1aed98af38204e861b
 LevelToLoad = "res://Scenes/HellLevel.tscn"
 
 [node name="Henchmen3" parent="." instance=ExtResource("4_7u67b")]
@@ -57,7 +67,12 @@ EnemyStatus = 1
 position = Vector2(120, 40)
 up_direction = Vector2(0, 1)
 CurrentDirection = Vector2(0, -1)
+EnemyStatus = 2
 
 [node name="Henchmen" parent="." instance=ExtResource("4_7u67b")]
 position = Vector2(-24, 24)
 EnemyStatus = 2
+
+[node name="WinManager" type="Node" parent="."]
+script = ExtResource("7_ohik4")
+numGuards = 2
