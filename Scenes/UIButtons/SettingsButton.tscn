@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dqxqv1lbum8ws"]
+[gd_scene load_steps=0 format=3 uid="uid://dqxqv1lbum8ws"]
 
 [ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_68w7c"]
 [ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_6plyi"]

@@ -65,11 +65,39 @@ func turnedStone():
 			target.blocked = true
 			ReplaceWithBox()
 		EnemyState.Civillian:
+			var a
+			match CurrentDirection:
+				Vector2.UP:
+					a = "up-civ-death"
+				Vector2.DOWN:
+					a = "down-civ-death"
+				Vector2.LEFT:
+					a = "left-civ-death"
+				Vector2.RIGHT:
+					a = "right-civ-death"
 			var target = get_tree().current_scene.find_child("TickManager")
 			target.blocked = true
-			ReplaceWithBox()
+			$AnimatedSprite2D.play(a)
+			$AnimatedSprite2D.animation_finished.connect(ReplaceWithBox)
+			
 		_:
-			ReplaceWithBox()
+			var a
+			match CurrentDirection:
+				Vector2.UP:
+					a = "up-guard-death"
+				Vector2.DOWN:
+					a = "down-guard-death"
+				Vector2.LEFT:
+					a = "left-guard-death"
+				Vector2.RIGHT:
+					a = "right-guard-death"
+			var target = get_tree().current_scene.find_child("TickManager")
+			target.blocked = true
+			$AnimatedSprite2D.play(a)
+			$AnimatedSprite2D.animation_finished.connect(func ():
+				target.blocked = false
+				ReplaceWithBox()
+				)
 			
 func ReplaceWithBox():
 	var box_scene = load("res://Scenes/pushable.tscn")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwucs756o3nvk"
-path="res://.godot/imported/BigMedusaBlink5.png-7773be91494e1e9fd9451f42b6e51d55.ctex"
+uid="uid://bja1e85q3gl7f"
+path="res://.godot/imported/grayscale_070.png-11d0931a73c14a116164be399f47a89e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/BigMedusaBlink5.png"
-dest_files=["res://.godot/imported/BigMedusaBlink5.png-7773be91494e1e9fd9451f42b6e51d55.ctex"]
+source_file="res://Assets/henchmanToStone/grayscale_070.png"
+dest_files=["res://.godot/imported/grayscale_070.png-11d0931a73c14a116164be399f47a89e.ctex"]
 
 [params]
 

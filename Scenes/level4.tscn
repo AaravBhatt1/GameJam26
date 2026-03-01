@@ -67,4 +67,4 @@ EnemyStatus = 2
 
 [node name="WinManager" type="Node" parent="."]
 script = ExtResource("7_ohik4")
-numGuards = 2
+numGuards = 4
