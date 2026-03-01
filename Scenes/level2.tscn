@@ -1,10 +1,11 @@
-[gd_scene format=4 uid="uid://ckokupin1jhmt"]
+[gd_scene load_steps=7 format=4 uid="uid://ckokupin1jhmt"]
 
 [ext_resource type="TileSet" uid="uid://cfp8xkdkv3fsu" path="res://tileset.tres" id="1_onqnr"]
 [ext_resource type="PackedScene" uid="uid://6hqmwbsaiu0i" path="res://Scenes/Medusa.tscn" id="2_styii"]
 [ext_resource type="Script" uid="uid://8hlktwadq2n" path="res://Scenes/TickManager.gd" id="3_lgosu"]
 [ext_resource type="PackedScene" uid="uid://72rlqcnq2xhd" path="res://Scenes/Enemy.tscn" id="4_mhlpv"]
 [ext_resource type="PackedScene" uid="uid://cx2kfq3ag31ho" path="res://Scenes/SceneManager.tscn" id="5_ng020"]
+[ext_resource type="Script" uid="uid://ds8dbhjumgq50" path="res://Scenes/win_manager.gd" id="6_styii"]
 
 [node name="Level2" type="Node2D"]
 
@@ -28,6 +29,7 @@ one_shot = true
 
 [node name="God" parent="." instance=ExtResource("4_mhlpv")]
 position = Vector2(-72, -24)
+EnemyStatus = 2
 
 [node name="Civillian" parent="." instance=ExtResource("4_mhlpv")]
 position = Vector2(24, 40)
@@ -41,3 +43,7 @@ EnemyStatus = 2
 
 [node name="SceneManager" parent="." instance=ExtResource("5_ng020")]
 LevelToLoad = "res://Scenes/level3.tscn"
+
+[node name="WinManager" type="Node" parent="."]
+script = ExtResource("6_styii")
+numGuards = 2

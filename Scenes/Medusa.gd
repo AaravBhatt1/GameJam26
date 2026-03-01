@@ -96,7 +96,7 @@ func fireRay():
 		var should_draw_this_ray = false
 
 		while hits_remaining > 0:
-			print(hits_remaining)
+			#print(hits_remaining)
 			ray.global_position = current_origin
 			ray.target_position = current_dir * MAX_DISTANCE
 			ray.force_raycast_update()
