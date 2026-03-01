@@ -44,7 +44,7 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="SceneManager" parent="." unique_id=1368416961 instance=ExtResource("6_egqhl")]
 scale = Vector2(0.99999994, 0.99999994)
-LevelToLoad = "res://Scenes/level.tscn"
+LevelToLoad = "res://Scenes/HellLevel.tscn"
 
 [node name="Henchmen3" parent="." unique_id=354618475 instance=ExtResource("4_7u67b")]
 position = Vector2(8, 24)
