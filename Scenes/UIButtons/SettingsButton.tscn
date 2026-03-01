@@ -1,13 +1,15 @@
-[gd_scene load_steps=0 format=3 uid="uid://dqxqv1lbum8ws"]
+[gd_scene format=3 uid="uid://dqxqv1lbum8ws"]
 
 [ext_resource type="PackedScene" uid="uid://b7mcgick6mn5m" path="res://Scenes/UIButtons/MenuButton.tscn" id="1_68w7c"]
 [ext_resource type="LabelSettings" uid="uid://cclestekih0th" path="res://Scenes/UIButtons/buttontext.tres" id="2_6plyi"]
+[ext_resource type="Texture2D" uid="uid://b7d52jjxtapyn" path="res://Assets/SettingsButton.png" id="3_6plyi"]
 
 [node name="StartGameButton" unique_id=1741236543 instance=ExtResource("1_68w7c")]
 self_modulate = Color(1, 1, 1, 0)
 SceneToLoad = "res://control.tscn"
 
 [node name="Label" parent="." index="0" unique_id=1070044622]
+visible = false
 offset_left = 79.0
 offset_top = 2.0
 offset_right = 269.0
@@ -16,3 +18,8 @@ text = "SETTINGS"
 label_settings = ExtResource("2_6plyi")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=1107853345]
+position = Vector2(176, 31)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_6plyi")
