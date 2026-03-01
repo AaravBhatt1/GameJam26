@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://diycehackgy38"]
+[gd_scene format=3 uid="uid://diycehackgy38"]
 
 [ext_resource type="Script" uid="uid://d3qcoa41vjbih" path="res://Scenes/LoreScreen.gd" id="1_qm3yp"]
 [ext_resource type="PackedScene" uid="uid://5rmaojcqxf5c" path="res://Scenes/FadeIn.tscn" id="2_qm3yp"]
@@ -231,6 +231,10 @@ position = Vector2(-13, -13)
 [node name="FadeIn" parent="." unique_id=267792872 instance=ExtResource("2_qm3yp")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="fadeIn" from="." to="FadeIn" method="_on_lore_fade_in"]
 [connection signal="fadeFinished" from="FadeIn" to="." method="_on_fade_in_fade_finished"]
